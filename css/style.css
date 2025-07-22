@@ -28,7 +28,7 @@ body {
 /* Header Styles */
 .header {
     background-color: var(--color-primary);
-    padding: 25px 0; /* Increased padding for taller header */
+    padding: 25px 0;
 }
 
 .nav-container {
@@ -39,7 +39,7 @@ body {
     justify-content: flex-start;
     align-items: center;
     position: relative;
-    height: 60px; /* Fixed height for header container */
+    height: 5px;
 }
 
 /* Logo Styles */
@@ -59,7 +59,7 @@ body {
 /* Navigation Menu */
 nav {
     position: absolute;
-    left: 60px; /* Moved from 20px to 60px to bring it more towards center */
+    left: 60px;
 }
 
 .nav-menu {
@@ -87,11 +87,45 @@ nav {
     background-color: var(--color-white);
 }
 
+/* Home Page Specific Styles */
+.home-hero {
+    position: relative;
+    min-height: calc(100vh - 180px); /* Subtract header and footer height */
+    background-image: url('../images/Home page.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content {
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay */
+    padding: 40px;
+    border-radius: 8px;
+    max-width: 800px;
+    margin: 0 20px;
+    text-align: center;
+}
+
+.hero-content h1 {
+    color: var(--color-white);
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-text {
+    color: var(--color-white);
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 40px 20px;
-    min-height: calc(100vh - 180px);
 }
 
 /* Footer Styles */

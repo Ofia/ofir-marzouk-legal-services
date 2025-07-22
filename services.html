@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>תחומי התמחות - עו"ד אופיר מרזוק</title>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .banner {
+            width: 100%;
+            height: 300px;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 40px;
+        }
+
+        .banner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .banner-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .banner h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .service-card {
+            background: #f8f8f8;
+            border-radius: 8px;
+            padding: 25px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-card h3 {
+            color: var(--color-primary);
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+
+        .service-card p {
+            color: var(--color-text);
+            line-height: 1.6;
+        }
+
+        .contact-section {
+            background-color: var(--color-off-white);
+            padding: 40px;
+            border-radius: 8px;
+            margin-top: 40px;
+        }
+
+        .contact-section h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: var(--color-primary);
+        }
+
+        .contact-description {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: 'Assistant', sans-serif;
+        }
+
+        .form-group textarea {
+            height: 120px;
+        }
+
+        .submit-button {
+            background-color: var(--color-primary);
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-button:hover {
+            background-color: var(--color-darker);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/Logo.png" alt="עו״ד אופיר מרזוק" class="logo-image">
+            </a>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">דף הבית</a></li>
+                    <li><a href="about.html">אודות</a></li>
+                    <li><a href="services.html">תחומי התמחות</a></li>
+                    <li><a href="articles.html">מאמרים</a></li>
+                    <li><a href="contact.html">צור קשר</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Banner -->
+        <div class="banner">
+            <img src="images/Services.jpg" alt="שירותים משפטיים">
+            <div class="banner-overlay">
+                <h1>לצידך בהתמודדות עם אתגרים משפטיים מורכבים</h1>
+                <h2>שירותי המשרד</h2>
+            </div>
+        </div>
+
+        <div class="container">
+            <!-- Services Grid -->
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>פשיעת סייבר</h3>
+                    <p>אני מסייע ללקוחות המתמודדים עם אישומים הקשורים לפשיעת סייבר, כולל פריצה למערכות, הונאות, גניבת זהות ועבירות מקוונות אחרות. תיקים מסוג זה כוללים לעיתים קרובות פרטים טכניים ואלמנטים בינלאומיים, ואני פועל כדי להביא לתוצאה הטובה ביותר ולהבטיח שהזכויות שלך יישמרו בנוף המשפטי - דיגיטלי שמתפח במהירות.</p>
+                </div>
+
+                <div class="service-card">
+                    <h3>הסגרות</h3>
+                    <p>במידה ואתה עומד בפני הליך הסגרה, אני יכול להדריך אותך לאורך כל התהליך ולהילחם למנוע או לזרז את העברתך למדינה אחרת. אני מתמקד בהיבטים המשפטיים, הפרוצדורליים וזכויות האדם של תיקי הסגרה, ובונה קו הגנה חזק כדי לערער על בקשות שאינן הוגנות או חסרות ביסוס.</p>
+                </div>
+
+                <div class="service-card">
+                    <h3>מעצרים בינלאומיים</h3>
+                    <p>אני מסייע לאנשים שנעצרו בחו"ל או שמבוקשי בתחומי שיפוט שונים. תיקים כאלה דורשים תיאום בין-מדינתי, ואני פועל יחד עם אנשי קשר משפטיים במדינות אחרות כדי להבטיח שתקבל טיפול הוגן וליווי משפטי עקבי לאורך כל הדרך.</p>
+                </div>
+
+                <div class="service-card">
+                    <h3>כתבי אישום במדינה זרה</h3>
+                    <p>קבלת כתב אישום במדינה זרה יכולה להיות חוויה מלחיצה ומעוררת חרדה. אני מסייע ללקוחות להבין את האישומים המופנים נגדם, ובונה אסטרטגיה משפטית להתמודדות – בין אם מדובר בערעור על כתב האישום, ניהול מו״מ מול הרשויות, או תכנון קו הגנה.</p>
+                </div>
+
+                <div class="service-card">
+                    <h3>הסכמים עם התביעה</h3>
+                    <p>במקרים מסוימים, התוצאה הטובה ביותר מתקבלת באמצעות מו״מ. יש לי ניסיון בגיבוש הסכמים עם התביעה שמובילים להפחתת אישומים, צמצום ענישה, או הימנעות ממשפט – תוך שמירה על האינטרסים שלך והמטרות ארוכות הטווח שלך.</p>
+                </div>
+
+                <div class="service-card">
+                    <h3>רשת עורכי דין בינלאומית</h3>
+                    <p>כאשר התיק שלך חוצה גבולות, אני מגייס אנשי מקצוע משפטיים מהימנים מרחבי העולם. הרשת הזו מאפשרת לי להציע אסטרטגיות הגנה מתואמות ומבוססות, המתחשבות בחוקים ובנהלים של כל המדינות המעורבות.</p>
+                </div>
+            </div>
+
+            <!-- Contact Form Section -->
+            <div class="contact-section">
+                <h2>יצירת קשר</h2>
+                <div class="contact-description">
+                    <p>מעוניינים בשירותים משפטיים? שיחת בירור ויעוץ בחינם</p>
+                    <p>אנא מלאו את פרטיכם וניצור קשר בהקדם האפשרי. נשמח להעניק לכם ייעוץ מקצועי וממוקד.</p>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm" action="https://formspree.io/f/xanbqrew" method="POST">
+                        <div class="form-group">
+                            <label for="name">שם מלא</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">דוא"ל</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">טלפון</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">הודעה</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-button">שלח הודעה</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-info">
+                <h3>עו"ד אופיר מרזוק</h3>
+                <p>משרד עורכי דין המתמחה במשפט פלילי בינלאומי</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 כל הזכויות שמורות </p>
+        </div>
+    </footer>
+</body>
+</html>

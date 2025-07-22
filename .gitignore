@@ -1,6 +1,14 @@
+# System files
 .DS_Store
 Thumbs.db
-*.log
+
+# IDE files
 .vscode/
 .idea/
+
+# Dependencies
 node_modules/
+
+# Build files
+dist/
+build/
