@@ -28,7 +28,8 @@ body {
 /* Header Styles */
 .header {
     background-color: var(--color-primary);
-    padding: 25px 0;
+    padding: 15px 0;
+    position: relative;
 }
 
 .nav-container {
@@ -36,18 +37,15 @@ body {
     margin: 0 auto;
     padding: 0 20px;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
-    position: relative;
-    height: 5px;
+    min-height: 60px;
 }
 
 /* Logo Styles */
 .logo {
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
+    position: relative;
+    margin-left: auto;
     z-index: 2;
 }
 
@@ -58,14 +56,13 @@ body {
 
 /* Navigation Menu */
 nav {
-    position: absolute;
-    left: 60px;
+    position: relative;
 }
 
 .nav-menu {
     list-style: none;
     display: flex;
-    gap: 40px;
+    gap: 20px;
 }
 
 .nav-menu a {
@@ -81,6 +78,18 @@ nav {
     color: var(--color-off-white);
 }
 
+/* Mobile Menu Button */
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--color-white);
+    font-size: 24px;
+    cursor: pointer;
+    padding: 5px;
+    z-index: 3;
+}
+
 /* Main Content */
 .main-content {
     flex: 1;
@@ -90,7 +99,7 @@ nav {
 /* Home Page Specific Styles */
 .home-hero {
     position: relative;
-    min-height: calc(100vh - 180px); /* Subtract header and footer height */
+    min-height: calc(100vh - 180px);
     background-image: url('../images/Home page.png');
     background-size: cover;
     background-position: center;
@@ -98,45 +107,49 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 20px;
 }
 
 .hero-content {
-    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay */
-    padding: 40px;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 30px;
     border-radius: 8px;
+    width: 100%;
     max-width: 800px;
-    margin: 0 20px;
+    margin: 0 auto;
     text-align: center;
 }
 
 .hero-content h1 {
     color: var(--color-white);
-    font-size: 2.5rem;
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
     margin-bottom: 20px;
     line-height: 1.2;
 }
 
 .hero-text {
     color: var(--color-white);
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 2vw, 1.2rem);
     line-height: 1.6;
 }
 
 .container {
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 40px 20px;
+    padding: 20px;
 }
 
 /* Footer Styles */
 .footer {
     background-color: var(--color-primary);
     color: var(--color-white);
-    padding: 40px 0 20px;
+    padding: 30px 0 20px;
     margin-top: auto;
 }
 
 .footer-container {
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
@@ -148,10 +161,12 @@ nav {
 
 .footer-info h3 {
     margin-bottom: 15px;
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
 }
 
 .footer-info p {
     margin-bottom: 10px;
+    font-size: clamp(0.9rem, 2vw, 1rem);
 }
 
 .footer-bottom {
@@ -159,4 +174,75 @@ nav {
     padding-top: 20px;
     margin-top: 20px;
     border-top: 1px solid var(--color-lighter);
+}
+
+/* Mobile Responsive Styles */
+@media screen and (max-width: 768px) {
+    .nav-container {
+        padding: 0 15px;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        background-color: var(--color-primary);
+        padding: 80px 20px 20px;
+        transition: left 0.3s ease;
+        z-index: 2;
+    }
+
+    nav.active {
+        left: 0;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .nav-menu a {
+        font-size: 20px;
+    }
+
+    .logo {
+        margin: 0 auto;
+    }
+
+    .logo-image {
+        height: 40px;
+    }
+
+    .home-hero {
+        min-height: calc(100vh - 140px);
+    }
+
+    .hero-content {
+        padding: 20px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero-content {
+        padding: 15px;
+    }
+
+    .nav-menu a {
+        font-size: 18px;
+    }
+
+    .footer {
+        padding: 20px 0 15px;
+    }
 }

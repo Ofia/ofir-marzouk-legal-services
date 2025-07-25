@@ -13,7 +13,7 @@
     <style>
         .contact-hero {
             width: 100%;
-            height: 500px; /* Increased from 300px to 500px */
+            height: 500px;
             position: relative;
             overflow: hidden;
             margin-bottom: 40px;
@@ -43,38 +43,39 @@
         .contact-hero-content {
             color: white;
             max-width: 800px;
+            width: 100%;
         }
 
         .contact-hero-content h1 {
-            font-size: 2.5rem;
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
             margin-bottom: 20px;
         }
 
         .contact-hero-content p {
-            font-size: 1.2rem;
+            font-size: clamp(1rem, 2vw, 1.2rem);
             line-height: 1.6;
         }
 
         .contact-section {
-            max-width: 600px; /* Reduced from 800px to 600px */
+            max-width: 600px;
             margin: 0 auto;
-            padding: 20px; /* Reduced padding */
+            padding: 20px;
         }
 
         .contact-form {
             background-color: #f8f8f8;
-            padding: 30px; /* Reduced padding */
+            padding: 30px;
             border-radius: 8px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
 
         .form-group {
-            margin-bottom: 15px; /* Reduced margin */
+            margin-bottom: 15px;
         }
 
         .form-group label {
             display: block;
-            margin-bottom: 6px; /* Reduced margin */
+            margin-bottom: 6px;
             font-weight: 600;
             color: var(--color-primary);
         }
@@ -82,7 +83,7 @@
         .form-group input,
         .form-group textarea {
             width: 100%;
-            padding: 10px; /* Reduced padding */
+            padding: 10px;
             border: 1px solid #ddd;
             border-radius: 4px;
             font-family: 'Assistant', sans-serif;
@@ -90,7 +91,7 @@
         }
 
         .form-group textarea {
-            height: 120px; /* Reduced height */
+            height: 120px;
             resize: vertical;
         }
 
@@ -103,7 +104,7 @@
         .submit-button {
             background-color: var(--color-primary);
             color: white;
-            padding: 10px 25px; /* Reduced padding */
+            padding: 12px 30px;
             border: none;
             border-radius: 4px;
             font-size: 1.1rem;
@@ -119,11 +120,11 @@
 
         .contact-info {
             text-align: center;
-            margin-bottom: 30px; /* Reduced margin */
+            margin-bottom: 30px;
         }
 
         .contact-info p {
-            font-size: 1.1rem;
+            font-size: clamp(0.9rem, 2vw, 1.1rem);
             line-height: 1.6;
             margin-bottom: 10px;
         }
@@ -136,15 +137,57 @@
         .contact-info a:hover {
             text-decoration: underline;
         }
+
+        /* Mobile Responsive Styles */
+        @media screen and (max-width: 768px) {
+            .contact-hero {
+                height: 400px;
+                margin-bottom: 30px;
+            }
+
+            .contact-section {
+                padding: 15px;
+            }
+
+            .contact-form {
+                padding: 20px;
+            }
+
+            .form-group {
+                margin-bottom: 12px;
+            }
+
+            .submit-button {
+                padding: 10px 25px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .contact-hero {
+                height: 300px;
+                margin-bottom: 20px;
+            }
+
+            .contact-form {
+                padding: 15px;
+            }
+
+            .form-group input,
+            .form-group textarea {
+                padding: 8px;
+            }
+
+            .submit-button {
+                padding: 10px 20px;
+            }
+        }
     </style>
 </head>
 <body>
     <!-- Header -->
     <header class="header">
         <div class="nav-container">
-            <a href="index.html" class="logo">
-                <img src="images/Logo.png" alt="עו״ד אופיר מרזוק" class="logo-image">
-            </a>
+            <button class="mobile-menu-btn">☰</button>
             <nav>
                 <ul class="nav-menu">
                     <li><a href="index.html">דף הבית</a></li>
@@ -154,6 +197,9 @@
                     <li><a href="contact.html">צור קשר</a></li>
                 </ul>
             </nav>
+            <a href="index.html" class="logo">
+                <img src="images/Logo.png" alt="עו״ד אופיר מרזוק" class="logo-image">
+            </a>
         </div>
     </header>
 
@@ -211,5 +257,8 @@
             <p>&copy; 2025 כל הזכויות שמורות </p>
         </div>
     </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
 </body>
 </html>
