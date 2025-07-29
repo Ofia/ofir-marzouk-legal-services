@@ -1,21 +1,31 @@
 <!DOCTYPE html>
-<html lang="he" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>אודות - עו"ד אופיר מרזוק</title>
+    <title>About - Ofir Marzouk Law Office</title>
     
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700&display=swap" rel="stylesheet">
     
     <!-- Styles -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <style>
+        /* Override RTL specific styles for LTR */
+        body {
+            direction: ltr;
+        }
+        
+        .logo {
+            margin-right: 0;
+            margin-left: auto;
+        }
+
         /* Language Switcher */
         .lang-switch {
             position: absolute;
             top: 20px;
-            left: 20px;  /* Left side in RTL layout */
+            right: 20px;
             z-index: 1000;
         }
 
@@ -175,18 +185,18 @@
             <button class="mobile-menu-btn">☰</button>
             <nav>
                 <ul class="nav-menu">
-                    <li><a href="index.html">דף הבית</a></li>
-                    <li><a href="about.html">אודות</a></li>
-                    <li><a href="services.html">תחומי התמחות</a></li>
-                    <li><a href="articles.html">מאמרים</a></li>
-                    <li><a href="contact.html">צור קשר</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="../articles.html">Articles</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
             <a href="index.html" class="logo">
-                <img src="images/Logo.png" alt="עו״ד אופיר מרזוק" class="logo-image">
+                <img src="../images/Logo.png" alt="Ofir Marzouk Law Office" class="logo-image">
             </a>
             <div class="lang-switch">
-                <a href="en/about.html">EN</a>
+                <a href="../about.html">עברית</a>
             </div>
         </div>
     </header>
@@ -196,44 +206,44 @@
         <div class="container">
             <div class="about-section">
                 <div class="profile-image">
-                    <img src="images/About me.jpg" alt="עו״ד אופיר מרזוק">
+                    <img src="../images/About me.jpg" alt="Ofir Marzouk">
                 </div>
                 <div class="about-content">
-                    <h1>אופיר מרזוק - עורך דין פלילי בינלאומי</h1>
+                    <h1>Ofir Marzouk - International Criminal Defense Attorney</h1>
                     <p>
-                        מעל עשור עם התמחות בהגנה פלילית והתמקדות מיוחדת בתיקים בעלי אופי בינלאומי. במהלך השנים טיפלתי בתיקים הקשורים לפשיעת סייבר, הסגרות, מעצרים בינלאומיים וכתבי אישום במדינות זרות. יש לי גם ניסיון בניהול מו״מ עם רשויות התביעה כאשר הדבר משרת את טובת הלקוח.
+                        With over a decade of experience in criminal defense and a special focus on international cases, I have handled matters ranging from cybercrime to extraditions, international arrests, and foreign indictments. I also have extensive experience in negotiating with prosecution authorities when it serves the client's best interests.
                     </p>
                     <p>
-                        עבודתי כוללת לעיתים קרובות שיתוף פעולה עם רשת עורכי דין מהימנים במדינות שונות, כדי להבטיח שלקוחותיי יקבלו ייצוג מקצועי ואפקטיבי — בכל מקום בו מתנהל ההליך. אני ניגש לכל תיק בקפידה, באסטרטגיה ברורה, ובהבנה עמוקה של האופן שבו מערכות משפט מורכבות עשויות להשפיע על חייהם של אנשים.
+                        My work often involves collaboration with a trusted network of attorneys across different countries to ensure my clients receive professional and effective representation — wherever their case may be. I approach each case meticulously, with a clear strategy and a deep understanding of how complex legal systems can impact people's lives.
                     </p>
                 </div>
             </div>
 
             <div class="contact-section">
-                <h2>יצירת קשר</h2>
+                <h2>Contact Us</h2>
                 <div class="contact-description">
-                    <p>מעוניינים בשירותים משפטיים? שיחת בירור ויעוץ בחינם</p>
-                    <p>אנא מלאו את פרטיכם וניצור קשר בהקדם האפשרי. נשמח להעניק לכם ייעוץ מקצועי וממוקד.</p>
+                    <p>Interested in legal services? Free consultation available</p>
+                    <p>Please fill out your details and we will contact you as soon as possible. We look forward to providing you with professional and focused advice.</p>
                 </div>
                 <div class="contact-form">
                     <form id="contactForm" action="https://formspree.io/f/xanbqrew" method="POST">
                         <div class="form-group">
-                            <label for="name">שם מלא</label>
+                            <label for="name">Full Name</label>
                             <input type="text" id="name" name="name" required>
                         </div>
                         <div class="form-group">
-                            <label for="email">דוא"ל</label>
+                            <label for="email">Email</label>
                             <input type="email" id="email" name="email" required>
                         </div>
                         <div class="form-group">
-                            <label for="phone">טלפון</label>
+                            <label for="phone">Phone</label>
                             <input type="tel" id="phone" name="phone" required>
                         </div>
                         <div class="form-group">
-                            <label for="message">הודעה</label>
+                            <label for="message">Message</label>
                             <textarea id="message" name="message" required></textarea>
                         </div>
-                        <button type="submit" class="submit-button">שלח הודעה</button>
+                        <button type="submit" class="submit-button">Send Message</button>
                     </form>
                 </div>
             </div>
@@ -244,16 +254,16 @@
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-info">
-                <h3>עו"ד אופיר מרזוק</h3>
-                <p>משרד עורכי דין המתמחה במשפט פלילי בינלאומי</p>
+                <h3>Ofir Marzouk Law Office</h3>
+                <p>Specializing in International Criminal Law</p>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2025 כל הזכויות שמורות</p>
+            <p>&copy; 2025 All Rights Reserved</p>
         </div>
     </footer>
 
     <!-- Scripts -->
-    <script src="js/main.js"></script>
+    <script src="../js/main.js"></script>
 </body>
 </html>

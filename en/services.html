@@ -1,21 +1,31 @@
 <!DOCTYPE html>
-<html lang="he" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>תחומי התמחות - עו"ד אופיר מרזוק</title>
+    <title>Services - Ofir Marzouk Law Office</title>
     
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700&display=swap" rel="stylesheet">
     
     <!-- Styles -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <style>
+        /* Override RTL specific styles for LTR */
+        body {
+            direction: ltr;
+        }
+        
+        .logo {
+            margin-right: 0;
+            margin-left: auto;
+        }
+
         /* Language Switcher */
         .lang-switch {
             position: absolute;
             top: 20px;
-            left: 20px;  /* Left side in RTL layout */
+            right: 20px;
             z-index: 1000;
         }
 
@@ -218,18 +228,18 @@
             <button class="mobile-menu-btn">☰</button>
             <nav>
                 <ul class="nav-menu">
-                    <li><a href="index.html">דף הבית</a></li>
-                    <li><a href="about.html">אודות</a></li>
-                    <li><a href="services.html">תחומי התמחות</a></li>
-                    <li><a href="articles.html">מאמרים</a></li>
-                    <li><a href="contact.html">צור קשר</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="../articles.html">Articles</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
             <a href="index.html" class="logo">
-                <img src="images/Logo.png" alt="עו״ד אופיר מרזוק" class="logo-image">
+                <img src="../images/Logo.png" alt="Ofir Marzouk Law Office" class="logo-image">
             </a>
             <div class="lang-switch">
-                <a href="en/services.html">EN</a>
+                <a href="../services.html">עברית</a>
             </div>
         </div>
     </header>
@@ -238,10 +248,10 @@
     <main class="main-content">
         <!-- Banner -->
         <div class="banner">
-            <img src="images/Services.jpg" alt="שירותים משפטיים">
+            <img src="../images/Services.jpg" alt="Legal Services">
             <div class="banner-overlay">
-                <h1>לצידך בהתמודדות עם אתגרים משפטיים מורכבים</h1>
-                <h2>שירותי המשרד</h2>
+                <h1>By Your Side in Complex Legal Challenges</h1>
+                <h2>Our Services</h2>
             </div>
         </div>
 
@@ -249,62 +259,62 @@
             <!-- Services Grid -->
             <div class="services-grid">
                 <div class="service-card">
-                    <h3>פשיעת סייבר</h3>
-                    <p>אני מסייע ללקוחות המתמודדים עם אישומים הקשורים לפשיעת סייבר, כולל פריצה למערכות, הונאות, גניבת זהות ועבירות מקוונות אחרות. תיקים מסוג זה כוללים לעיתים קרובות פרטים טכניים ואלמנטים בינלאומיים, ואני פועל כדי להביא לתוצאה הטובה ביותר ולהבטיח שהזכויות שלך יישמרו בנוף המשפטי - דיגיטלי שמתפח במהירות.</p>
+                    <h3>Cybercrime</h3>
+                    <p>I assist clients facing cybercrime charges, including system breaches, fraud, identity theft, and other online offenses. These cases often involve technical details and international elements, and I work to achieve the best possible outcome while ensuring your rights are protected in the rapidly evolving digital-legal landscape.</p>
                 </div>
 
                 <div class="service-card">
-                    <h3>הסגרות</h3>
-                    <p>במידה ואתה עומד בפני הליך הסגרה, אני יכול להדריך אותך לאורך כל התהליך ולהילחם למנוע או לזרז את העברתך למדינה אחרת. אני מתמקד בהיבטים המשפטיים, הפרוצדורליים וזכויות האדם של תיקי הסגרה, ובונה קו הגנה חזק כדי לערער על בקשות שאינן הוגנות או חסרות ביסוס.</p>
+                    <h3>Extraditions</h3>
+                    <p>If you're facing extradition proceedings, I can guide you through the process and fight to prevent or expedite your transfer to another country. I focus on the legal, procedural, and human rights aspects of extradition cases, building strong defenses to challenge unfair or unfounded requests.</p>
                 </div>
 
                 <div class="service-card">
-                    <h3>מעצרים בינלאומיים</h3>
-                    <p>אני מסייע לאנשים שנעצרו בחו"ל או שמבוקשי בתחומי שיפוט שונים. תיקים כאלה דורשים תיאום בין-מדינתי, ואני פועל יחד עם אנשי קשר משפטיים במדינות אחרות כדי להבטיח שתקבל טיפול הוגן וליווי משפטי עקבי לאורך כל הדרך.</p>
+                    <h3>International Arrests</h3>
+                    <p>I assist individuals arrested abroad or wanted in different jurisdictions. Such cases require inter-state coordination, and I work alongside legal contacts in other countries to ensure you receive fair treatment and consistent legal support throughout the process.</p>
                 </div>
 
                 <div class="service-card">
-                    <h3>כתבי אישום במדינה זרה</h3>
-                    <p>קבלת כתב אישום במדינה זרה יכולה להיות חוויה מלחיצה ומעוררת חרדה. אני מסייע ללקוחות להבין את האישומים המופנים נגדם, ובונה אסטרטגיה משפטית להתמודדות – בין אם מדובר בערעור על כתב האישום, ניהול מו״מ מול הרשויות, או תכנון קו הגנה.</p>
+                    <h3>Foreign Indictments</h3>
+                    <p>Receiving an indictment in a foreign country can be a stressful and anxiety-inducing experience. I help clients understand the charges against them and build a legal strategy for response – whether that involves challenging the indictment, negotiating with authorities, or planning a defense strategy.</p>
                 </div>
 
                 <div class="service-card">
-                    <h3>הסכמים עם התביעה</h3>
-                    <p>במקרים מסוימים, התוצאה הטובה ביותר מתקבלת באמצעות מו״מ. יש לי ניסיון בגיבוש הסכמים עם התביעה שמובילים להפחתת אישומים, צמצום ענישה, או הימנעות ממשפט – תוך שמירה על האינטרסים שלך והמטרות ארוכות הטווח שלך.</p>
+                    <h3>Prosecution Agreements</h3>
+                    <p>In certain cases, the best outcome is achieved through negotiation. I have experience in developing agreements with prosecution authorities that lead to reduced charges, minimized penalties, or trial avoidance – while protecting your interests and long-term goals.</p>
                 </div>
 
                 <div class="service-card">
-                    <h3>רשת עורכי דין בינלאומית</h3>
-                    <p>כאשר התיק שלך חוצה גבולות, אני מגייס אנשי מקצוע משפטיים מהימנים מרחבי העולם. הרשת הזו מאפשרת לי להציע אסטרטגיות הגנה מתואמות ומבוססות, המתחשבות בחוקים ובנהלים של כל המדינות המעורבות.</p>
+                    <h3>International Legal Network</h3>
+                    <p>When your case crosses borders, I engage trusted legal professionals from around the world. This network allows me to offer coordinated and well-founded defense strategies that take into account the laws and procedures of all involved countries.</p>
                 </div>
             </div>
 
             <!-- Contact Form Section -->
             <div class="contact-section">
-                <h2>יצירת קשר</h2>
+                <h2>Contact Us</h2>
                 <div class="contact-description">
-                    <p>מעוניינים בשירותים משפטיים? שיחת בירור ויעוץ בחינם</p>
-                    <p>אנא מלאו את פרטיכם וניצור קשר בהקדם האפשרי. נשמח להעניק לכם ייעוץ מקצועי וממוקד.</p>
+                    <p>Interested in legal services? Free consultation available</p>
+                    <p>Please fill out your details and we will contact you as soon as possible. We look forward to providing you with professional and focused advice.</p>
                 </div>
                 <div class="contact-form">
                     <form id="contactForm" action="https://formspree.io/f/xanbqrew" method="POST">
                         <div class="form-group">
-                            <label for="name">שם מלא</label>
+                            <label for="name">Full Name</label>
                             <input type="text" id="name" name="name" required>
                         </div>
                         <div class="form-group">
-                            <label for="email">דוא"ל</label>
+                            <label for="email">Email</label>
                             <input type="email" id="email" name="email" required>
                         </div>
                         <div class="form-group">
-                            <label for="phone">טלפון</label>
+                            <label for="phone">Phone</label>
                             <input type="tel" id="phone" name="phone" required>
                         </div>
                         <div class="form-group">
-                            <label for="message">הודעה</label>
+                            <label for="message">Message</label>
                             <textarea id="message" name="message" required></textarea>
                         </div>
-                        <button type="submit" class="submit-button">שלח הודעה</button>
+                        <button type="submit" class="submit-button">Send Message</button>
                     </form>
                 </div>
             </div>
@@ -315,16 +325,16 @@
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-info">
-                <h3>עו"ד אופיר מרזוק</h3>
-                <p>משרד עורכי דין המתמחה במשפט פלילי בינלאומי</p>
+                <h3>Ofir Marzouk Law Office</h3>
+                <p>Specializing in International Criminal Law</p>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2025 כל הזכויות שמורות </p>
+            <p>&copy; 2025 All Rights Reserved</p>
         </div>
     </footer>
 
     <!-- Scripts -->
-    <script src="js/main.js"></script>
+    <script src="../js/main.js"></script>
 </body>
 </html>
