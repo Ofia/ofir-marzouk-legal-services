@@ -45,7 +45,7 @@ body {
 /* Logo Styles */
 .logo {
     position: relative;
-    margin-left: auto;
+    margin-left: 0;    /* Changed from auto to 0 to align left on desktop */
     z-index: 2;
 }
 
@@ -213,7 +213,7 @@ nav {
     }
 
     .logo {
-        margin: 0 auto;
+        margin: 0 auto;    /* Center the logo on mobile */
     }
 
     .logo-image {
