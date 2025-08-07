@@ -40,12 +40,13 @@ body {
     justify-content: space-between;
     align-items: center;
     min-height: 60px;
+    position: relative; /* Added for absolute positioning context */
 }
 
 /* Logo Styles */
 .logo {
     position: relative;
-    margin-left: 0;    /* Changed from auto to 0 to align left on desktop */
+    margin-right: 20px; /* Add some spacing between logo and navigation */
     z-index: 2;
 }
 
@@ -54,9 +55,35 @@ body {
     width: auto;
 }
 
+/* Language Switcher */
+.lang-switch {
+    position: absolute;
+    top: 50%;
+    left: 15px;  /* Adjusted from 20px to 15px */
+    transform: translateY(-50%);
+    z-index: 1000;
+}
+
+.lang-switch a {
+    color: white;
+    text-decoration: none;
+    padding: 4px 8px; /* Reduced padding from 5px 10px */
+    border: 1px solid white;
+    border-radius: 4px;
+    font-size: 12px; /* Reduced from 14px */
+    display: inline-block;
+}
+
+.lang-switch a:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
 /* Navigation Menu */
 nav {
     position: relative;
+    flex-grow: 1; /* Allow nav to take up remaining space */
+    display: flex;
+    justify-content: center; /* Center the navigation items */
 }
 
 .nav-menu {
@@ -196,6 +223,7 @@ nav {
         padding: 80px 20px 20px;
         transition: left 0.3s ease;
         z-index: 2;
+        display: block; /* Override flex display */
     }
 
     nav.active {
@@ -213,7 +241,10 @@ nav {
     }
 
     .logo {
-        margin: 0 auto;    /* Center the logo on mobile */
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-right: 0;
     }
 
     .logo-image {
@@ -230,6 +261,12 @@ nav {
 
     .container {
         padding: 15px;
+    }
+
+    .lang-switch {
+        top: 50%;
+        left: 10px;
+        transform: translateY(-50%);
     }
 }
 
