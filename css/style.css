@@ -52,10 +52,17 @@ body {
     transform: translateX(-100px);
 }
 
+/* Adjust logo margin for LTR */
+[dir="ltr"] .logo {
+    margin-left: -40px; /* Add space from the left in LTR */
+    margin-right: -230px;
+    transform: translateX(-100px);
+}
+
 /* Adjust logo margin for RTL */
 [dir="rtl"] .logo {
     margin-right: 80px; /* Add space from the right in RTL */
-    margin-left: 20px;
+    margin-left: -230px;
     transform: translateX(100px);
 }
 
@@ -108,12 +115,12 @@ nav {
 
 /* LTR (English) */
 [dir="ltr"] .lang-switch {
-    right: 15px;
+    right: -220px;
 }
 
 /* RTL (Hebrew) */
 [dir="rtl"] .lang-switch {
-    left: 15px;
+    left: -220px;
 }
 
 .lang-switch a {
@@ -255,7 +262,7 @@ nav {
         background-color: var(--color-primary);
         padding: 80px 20px 20px;
         transition: 0.3s ease;
-        z-index: 2;
+        z-index: 1001;
     }
 
     [dir="ltr"] nav {
@@ -296,11 +303,11 @@ nav {
     }
 
     [dir="ltr"] .lang-switch {
-        right: 10px;
+        right: 15px;
     }
 
     [dir="rtl"] .lang-switch {
-        left: 10px;
+        left: 15px;
     }
 }
 

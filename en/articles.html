@@ -132,8 +132,11 @@
         /* Mobile Responsive Styles */
         @media screen and (max-width: 768px) {
             .lang-switch {
-                top: 15px;
-                right: 60px;  /* Move left to avoid hamburger menu */
+                position: absolute;
+                justify-self: end;
+                transform: translateY(-50%);
+                top: 50%;
+                right: 15px;
             }
             
             .articles-container {

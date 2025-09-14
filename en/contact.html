@@ -43,9 +43,40 @@
         }
 
         @media screen and (max-width: 768px) {
+            /* Mobile Header Layout: Hamburger | Logo | Language Switcher */
+            .nav-container {
+                display: grid;
+                grid-template-columns: 50px 1fr 50px;
+                align-items: center;
+                gap: 10px;
+            }
+            
+            .mobile-menu-btn {
+                position: static;
+                justify-self: start;
+                margin: 0;
+            }
+            
+            .logo {
+                justify-self: center;
+                margin: 0;
+                transform: none;
+            }
+            
+            .logo-image {
+                height: 40px;
+            }
+            
             .lang-switch {
-                top: 15px;
-                right: 60px;  /* Move left to avoid hamburger menu */
+                position: absolute;
+                justify-self: end;
+                transform: translateY(-50%);
+                top: 50%;
+                right: 15px;
+            }
+            
+            nav {
+                grid-column: 1 / -1;
             }
         }
 
@@ -231,7 +262,7 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="services.html">Services</a></li>
-                    <li><a href="../articles.html">Articles</a></li>
+                    <li><a href="articles.html">Articles</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
