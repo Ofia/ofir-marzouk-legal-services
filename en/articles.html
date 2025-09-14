@@ -1,16 +1,26 @@
 <!DOCTYPE html>
-<html lang="he" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>מאמרים - עו"ד אופיר מרזוק</title>
+    <title>Articles - Ofir Marzouk Law Office</title>
     
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700&display=swap" rel="stylesheet">
     
     <!-- Styles -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <style>
+        /* Override RTL specific styles for LTR */
+        body {
+            direction: ltr;
+        }
+        
+        .logo {
+            margin-right: 0;
+            margin-left: auto;
+        }
+
         .articles-container {
             max-width: 1200px;
             margin: 40px auto;
@@ -102,7 +112,7 @@
         .lang-switch {
             position: absolute;
             top: 20px;
-            left: 20px;
+            right: 20px;
             z-index: 1000;
         }
 
@@ -164,18 +174,18 @@
             <button class="mobile-menu-btn">☰</button>
             <nav>
                 <ul class="nav-menu">
-                    <li><a href="index.html">דף הבית</a></li>
-                    <li><a href="about.html">אודות</a></li>
-                    <li><a href="services.html">תחומי התמחות</a></li>
-                    <li><a href="articles.html">מאמרים</a></li>
-                    <li><a href="contact.html">צור קשר</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="articles.html">Articles</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
             <a href="index.html" class="logo">
-                <img src="images/Logo.png" alt="עו״ד אופיר מרזוק" class="logo-image">
+                <img src="../images/Logo.png" alt="Ofir Marzouk Law Office" class="logo-image">
             </a>
             <div class="lang-switch">
-                <a href="en/articles.html">EN</a>
+                <a href="../articles.html">עברית</a>
             </div>
         </div>
     </header>
@@ -183,53 +193,53 @@
     <!-- Main Content -->
     <main class="main-content">
         <div class="articles-container">
-            <h1 class="articles-title">מאמרים מקצועיים</h1>
+            <h1 class="articles-title">Professional Articles</h1>
             
             <div class="articles-grid">
                 <!-- Article 1 - Interpol -->
                 <div class="article-card">
                     <a href="articles/interpol.html" class="article-link">
                         <div class="article-image">
-                            <img src="images/Article Interpol.jpeg" alt="אינטרפול והודעות אדומות">
+                            <img src="../images/Article Interpol.jpeg" alt="Interpol and Red Notices">
                         </div>
                         <div class="article-content">
-                            <h2 class="article-title">אינטרפול והודעות אדומות – מה צריך לדעת</h2>
+                            <h2 class="article-title">Interpol and Red Notices – What You Need to Know</h2>
                             <p class="article-excerpt">
-                                כאשר אדם מבוקש על ידי מדינה זרה – לא פעם הוא מגלה זאת רק כאשר הוא נעצר בנמל תעופה. מאחורי מעצר כזה לרוב עומדת הודעה אדומה של אינטרפול...
+                                When a person is wanted by a foreign country, they often discover this only when arrested at an airport. Behind such arrests usually stands an Interpol Red Notice...
                             </p>
-                            <span class="read-more">קרא עוד</span>
+                            <span class="read-more">Read More</span>
                         </div>
                     </a>
                 </div>
 
-                <!-- Article 2 - FX -->
+                <!-- Article 2 - Forex -->
                 <div class="article-card">
                     <a href="articles/forex.html" class="article-link">
                         <div class="article-image">
-                            <img src="images/Article FX.jpg" alt="פורקס ומסחר אונליין">
+                            <img src="../images/Article FX.jpg" alt="Forex and Online Trading">
                         </div>
                         <div class="article-content">
-                            <h2 class="article-title">פורקס, CFD, קריפטו, ומסחר אונליין – עבירות סייבר</h2>
+                            <h2 class="article-title">Forex, CFDs, Crypto, and Online Trading – Cyber Crimes</h2>
                             <p class="article-excerpt">
-                                במהלך שני העשורים האחרונים, נולדה וצמחה בישראל תעשייה חובקת עולם שהתמקדה בשיווק פלטפורמות למסחר אונליין...
+                                Over the past two decades, Israel has developed a global industry focused on marketing online trading platforms...
                             </p>
-                            <span class="read-more">קרא עוד</span>
+                            <span class="read-more">Read More</span>
                         </div>
                     </a>
                 </div>
 
-                <!-- Article 3 - Arrests -->
+                <!-- Article 3 - International Arrests -->
                 <div class="article-card">
                     <a href="articles/arrests.html" class="article-link">
                         <div class="article-image">
-                            <img src="images/Article Arrests.png" alt="מעצר והסגרה בינלאומיים">
+                            <img src="../images/Article Arrests.png" alt="International Arrest and Extradition">
                         </div>
                         <div class="article-content">
-                            <h2 class="article-title">נעצרת בחו"ל? מדריך מקיף למעצר והסגרה בינלאומיים</h2>
+                            <h2 class="article-title">Arrested Abroad? Complete Guide to International Arrest and Extradition</h2>
                             <p class="article-excerpt">
-                                מעצר של אזרח ישראלי מחוץ לגבולות המדינה הוא אירוע דרמטי ומורכב – משפטית, רגשית ולוגיסטית...
+                                The arrest of an Israeli citizen outside the country's borders is a dramatic and complex event – legally, emotionally, and logistically...
                             </p>
-                            <span class="read-more">קרא עוד</span>
+                            <span class="read-more">Read More</span>
                         </div>
                     </a>
                 </div>
@@ -241,16 +251,16 @@
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-info">
-                <h3>עו"ד אופיר מרזוק</h3>
-                <p>משרד עורכי דין המתמחה במשפט פלילי בינלאומי</p>
+                <h3>Ofir Marzouk Law Office</h3>
+                <p>Specializing in International Criminal Law</p>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2025 כל הזכויות שמורות</p>
+            <p>&copy; 2025 All Rights Reserved</p>
         </div>
     </footer>
 
     <!-- Scripts -->
-    <script src="js/main.js"></script>
+    <script src="../js/main.js"></script>
 </body>
 </html>

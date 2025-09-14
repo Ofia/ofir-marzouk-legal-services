@@ -99,6 +99,27 @@
             color: var(--color-primary);
         }
 
+        /* Language Switcher */
+        .lang-switch {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+        }
+
+        .lang-switch a {
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+            border: 1px solid white;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .lang-switch a:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
         /* Mobile Responsive Styles */
         @media screen and (max-width: 768px) {
             .article-banner {
@@ -162,6 +183,9 @@
             <a href="../index.html" class="logo">
                 <img src="../images/Logo.png" alt="עו״ד אופיר מרזוק" class="logo-image">
             </a>
+            <div class="lang-switch">
+                <a href="../en/articles/arrests.html">EN</a>
+            </div>
         </div>
     </header>
 
