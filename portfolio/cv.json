@@ -1,0 +1,100 @@
+{
+  "name": "Ofir Marzouk",
+  "title": "AI Solutions & QA Associate | Software Developer | Legal Engineer",
+  "contact": {
+    "email": "ofir08@gmail.com",
+    "phone": ["+436601772166", "+50660514607"],
+    "linkedin": "https://linkedin.com/in/ofir-marzouk-roewekamp-4bb85657",
+    "github": "https://github.com/Ofia",
+    "huggingface": "https://huggingface.co/Ofirmarz",
+    "real_estate": "https://ofirmarzouk.com/business"
+  },
+  "summary": "An adaptable solution engineer with hands-on experience in software development and QA testing, building end-to-end features from architecture to deployment. Integrates modern technologies, including AI, to enhance work and the software built. Also a qualified lawyer with experience in international law, real estate, compliance, and product management. Legal background enhances analytical approach and ability to navigate regulatory and business considerations within technical projects.",
+  "projects": [
+    {
+      "name": "The-Bull.ai",
+      "type": "Business Management App",
+      "description": "AI-powered MVP using Python, React Native, and TypeScript. Architected to integrate multiple APIs for business intelligence.",
+      "link": "https://youtube.com/shorts/QyfdxbyuJ-o?si=pPT6NUCkdwsrm8-Q"
+    },
+    {
+      "name": "DataAnalyzer",
+      "type": "Web App",
+      "description": "AI-powered web app using Python that creates graphic analyses and charts from raw data files.",
+      "link": "https://huggingface.co/spaces/Ofirmarz/ai-data-visualizer"
+    },
+    {
+      "name": "ShakespeareAI",
+      "type": "Chat Application",
+      "description": "AI-powered chat application that responds to prompts in Shakespearean Old English.",
+      "link": "https://huggingface.co/spaces/Ofirmarz/TheOldTimesAI"
+    },
+    {
+      "name": "Invoices Manager",
+      "type": "Full-Stack App",
+      "description": "AI-enhanced Invoice Manager built end-to-end (architecture to deployment). Full-stack with five cloud services for upload, AI extraction, validation, and storage.",
+      "link": "https://invoices-kappa-teal.vercel.app/"
+    }
+  ],
+  "technical_skills": {
+    "foundations": ["Python", "Git/GitHub", "REST API", "JavaScript", "HTML/CSS", "Postman", "Playwright", "Flask/Django (Basic)", "FastAPI", "Figma", "React Native", "Pytest"],
+    "cloud": ["AWS S3", "Supabase", "Render", "Vercel", "Google Cloud"],
+    "ai_tools": ["API Integration", "RAG (Pinecone)", "Prompt Engineering", "Hugging Face", "Replicate", "Claude Code", "OpenAI API", "Open Source LLMs"]
+  },
+  "legal_engineering": {
+    "degree": "LL.B. (Bachelor of Laws)",
+    "specializations": ["Banking Compliance (Cross-border)", "International Incorporations", "Real Estate Law", "Regulatory Permitting"]
+  },
+  "experience": [
+    {
+      "title": "QA AI Data and Content Moderator",
+      "company": "Majorel GmbH (Meta)",
+      "location": "Berlin",
+      "period": "2025 – 2026",
+      "highlights": [
+        "Evaluate and provide feedback to improve AI-assisted moderation workflows, contributing to the training and refinement of LLM development.",
+        "Review and moderate content according to Meta policies, ensuring high-standard accuracy and consistency in AI performance.",
+        "Collaborate with technical teams to support process improvements and maintain high-quality data standards."
+      ]
+    },
+    {
+      "title": "Product & Automation Specialist",
+      "company": "Planet Bibi LTD",
+      "location": "Remote",
+      "period": "2022 – 2025",
+      "highlights": [
+        "Led the transition from over-engineered external tooling to lightweight in-house solutions, significantly reducing operating expenses.",
+        "Integrated automation tools for operational systems and marketing funnels, aligning technical development with business priorities.",
+        "Redesigned database structures and connected payment solutions to streamline financial operations."
+      ]
+    },
+    {
+      "title": "Product & Legal Lead",
+      "company": "ACRY Development",
+      "location": "USA/Remote",
+      "period": "2016 – 2021",
+      "highlights": [
+        "Managed the development of several Fintech products, an Online Trading platform, Web Applications, a cryptocurrency coin, and a cryptocurrency exchange service.",
+        "Acted as the primary bridge among legal, financial, and technical stakeholders to ensure compliant implementation of products.",
+        "Designed and maintained financial data structures and reporting systems for the company's technical products and real estate investment portfolio."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "LL.B. (Bachelor of Laws)",
+      "institution": "College of Management"
+    },
+    {
+      "degree": "CS50 AI with Python & CS50 Computer Science for Lawyers",
+      "institution": "Harvard University",
+      "status": "Ongoing"
+    }
+  ],
+  "languages": [
+    { "language": "English", "level": "C2" },
+    { "language": "Hebrew", "level": "C2" },
+    { "language": "Spanish", "level": "B2" },
+    { "language": "German", "level": "B1" }
+  ]
+}
