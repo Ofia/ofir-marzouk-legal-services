@@ -1,0 +1,86 @@
+The Bull - Mobile App
+Description: Business management powered by AI.
+
+Tech Stack:
+Frontend: React Native 0.81.4, Expo SDK 54, TypeScript
+Backend: Node.js, Express
+AI: Claude API (claude-3-sonnet) with Tool Use
+Storage: Expo SecureStore, AsyncStorage
+Auth: Google OAuth 2.0, PayPal Client Credentials, Zodomus Basic Auth
+link: https://www.the-bull.ai/
+
+
+
+The Bull Contracts
+Description: A smart way to interact with contracts.
+
+Tech Stack:
+Frontend: Plain HTML/JS
+Backend: Python Flask, Anthropic SDK
+AI: Claude 3.5 Sonnet
+Decentralized DB: Gun.js + SEA (crypto signing)
+link: Noy deployed yet
+
+
+
+
+Invoice Manager
+Description: Invoice markup manager powered by AI.
+
+Tech Stack:
+Frontend: React, TypeScript, Vite, Shadcn/ui (Vercel)
+Backend: Python FastAPI, PostgreSQL (Supabase) (Render.com)
+AI: Anthropic Claude API (Data Extraction)
+Storage: AWS S3
+Auth: Google OAuth 2.0 + Gmail API
+link: https://invoices-kappa-teal.vercel.app/
+
+
+
+AI Data Visualizer
+Description: Graphic visualization for your data powered by AI.
+
+Tech Stack:  
+Frontend: HTML5, CSS3, JavaScript
+Backend: Flask (Python)
+AI: Hugging Face Router API (Qwen/Qwen2.5-72B-Instruct)
+Data Processing: pandas, pdfplumber, openpyxl, pytesseract
+Visualization: Plotly (interactive charts)
+link: https://huggingface.co/spaces/Ofirmarz/ai-data-visualizer
+
+
+
+
+The Old Times AI
+Description: AI chat in Old English and historical news feed.
+
+Tech Stack:
+Frontend: HTML5, CSS, JavaScript
+Backend: Django 6.0, Gunicorn
+AI: Hugging Face Qwen 2.5 72B (via Router API)
+Deployment: Docker on Hugging Face Spaces
+link: https://huggingface.co/spaces/Ofirmarz/TheOldTimesAI
+
+
+
+Eight Ball
+Description: Pixel art "Magic Eight Ball" game.
+
+Tech Stack: Python, Flask, PythonAnywhere
+link: https://ofia.pythonanywhere.com/
+
+
+
+Goma Slot Machine
+Description: Fun digital slot machine game.
+
+Tech Stack: HTML5, CSS3, JavaScript
+Link: https://ofia.github.io/Goma-Slot-Machine/
+
+
+
+Villa Kaleo
+Description: Luxury villa showcase website.
+
+Tech Stack: HTML5, CSS3
+link: https://villakaleost.com/

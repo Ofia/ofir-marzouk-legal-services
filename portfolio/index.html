@@ -90,7 +90,7 @@
     /* ─── Project image box ───────────────────────── */
     .project-box {
       flex-shrink: 0;
-      width: 320px; height: 240px;
+      width: 440px; height: 248px;
       border-radius: 10px;
       overflow: hidden;
       position: relative;
@@ -428,40 +428,52 @@
     // link:  optional URL, set to null to hide the "view project" link.
     const PROJECTS = [
       {
-        title:       'Project One',
-        description: '// description coming soon',
-        image:       null,
+        title:       'The Bull — Mobile App',
+        description: 'Business management powered by AI.\n\nFrontend: React Native 0.81.4, Expo SDK 54, TypeScript\nBackend: Node.js, Express\nAI: Claude API (claude-3-sonnet) with Tool Use\nStorage: Expo SecureStore, AsyncStorage\nAuth: Google OAuth 2.0, PayPal Client Credentials, Zodomus Basic Auth',
+        image:       'assets/projects/The Bull.jpg',
+        link:        'https://www.the-bull.ai/',
+      },
+      {
+        title:       'The Bull Contracts',
+        description: 'A smart way to interact with contracts.\n\nFrontend: Plain HTML/JS\nBackend: Python Flask, Anthropic SDK\nAI: Claude 3.5 Sonnet\nDecentralized DB: Gun.js + SEA (crypto signing)',
+        image:       'assets/projects/The Bull Contracts.jpg',
         link:        null,
       },
       {
-        title:       'Project Two',
-        description: '// description coming soon',
-        image:       null,
-        link:        null,
+        title:       'Invoice Manager',
+        description: 'Invoice markup manager powered by AI.\n\nFrontend: React, TypeScript, Vite, Shadcn/ui (Vercel)\nBackend: Python FastAPI, PostgreSQL (Supabase / Render.com)\nAI: Anthropic Claude API (Data Extraction)\nStorage: AWS S3\nAuth: Google OAuth 2.0 + Gmail API',
+        image:       'assets/projects/Invoice Manager.jpg',
+        link:        'https://invoices-kappa-teal.vercel.app/',
       },
       {
-        title:       'Project Three',
-        description: '// description coming soon',
-        image:       null,
-        link:        null,
+        title:       'AI Data Visualizer',
+        description: 'Graphic visualization for your data powered by AI.\n\nFrontend: HTML5, CSS3, JavaScript\nBackend: Flask (Python)\nAI: Hugging Face Router API (Qwen/Qwen2.5-72B-Instruct)\nData Processing: pandas, pdfplumber, openpyxl, pytesseract\nVisualization: Plotly (interactive charts)',
+        image:       'assets/projects/AI Data Visualizer.jpg',
+        link:        'https://huggingface.co/spaces/Ofirmarz/ai-data-visualizer',
       },
       {
-        title:       'Project Four',
-        description: '// description coming soon',
-        image:       null,
-        link:        null,
+        title:       'The Old Times AI',
+        description: 'AI chat in Old English and historical news feed.\n\nFrontend: HTML5, CSS, JavaScript\nBackend: Django 6.0, Gunicorn\nAI: Hugging Face Qwen 2.5 72B (via Router API)\nDeployment: Docker on Hugging Face Spaces',
+        image:       'assets/projects/The Old Times AI.jpg',
+        link:        'https://huggingface.co/spaces/Ofirmarz/TheOldTimesAI',
       },
       {
-        title:       'Project Five',
-        description: '// description coming soon',
-        image:       null,
-        link:        null,
+        title:       'Eight Ball',
+        description: 'Pixel art "Magic Eight Ball" game.\n\nTech Stack: Python, Flask, PythonAnywhere',
+        image:       'assets/projects/Eight Ball.jpg',
+        link:        'https://ofia.pythonanywhere.com/',
       },
       {
-        title:       'Project Six',
-        description: '// description coming soon',
-        image:       null,
-        link:        null,
+        title:       'Goma Slot Machine',
+        description: 'Fun digital slot machine game.\n\nTech Stack: HTML5, CSS3, JavaScript',
+        image:       'assets/projects/Goma Slot machine.jpg',
+        link:        'https://ofia.github.io/Goma-Slot-Machine/',
+      },
+      {
+        title:       'Villa Kaleo',
+        description: 'Luxury villa showcase website.\n\nTech Stack: HTML5, CSS3',
+        image:       'assets/projects/Villa Kaleo.jpg',
+        link:        'https://villakaleost.com/',
       },
     ];
 
@@ -547,6 +559,10 @@
 
         const box = document.createElement('div');
         box.className = 'project-box';
+        if (p.link) {
+          box.style.cursor = 'pointer';
+          box.addEventListener('click', () => window.open(p.link, '_blank', 'noopener,noreferrer'));
+        }
 
         if (p.image) {
           const img = document.createElement('img');
