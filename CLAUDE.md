@@ -91,3 +91,51 @@
 
 ## Ready for Deployment
 All English articles pages are complete with proper mobile responsiveness and language switching functionality.
+
+---
+
+## Portfolio Page — ofirmarzouk.com/portfolio
+
+### Status: ✅ LIVE
+
+A personal dev portfolio deployed as a subfolder of the legal services site.
+
+### File Structure:
+```
+portfolio/
+├── index.html          ← main portfolio page (edit PROJECTS array here)
+├── cv.json             ← CV data for the chatbot (update freely)
+└── assets/
+    └── projects/       ← drop project images here (PNG/JPG/WebP, ~960x540)
+```
+
+### File Structure:
+```
+portfolio/
+├── Icons/
+│   └── Robot Head.png      ← pixel-art robot icon used in top nav
+```
+
+### What's done:
+- Animated welcome → typewriter intro → project cards (zigzag layout)
+- AI chatbot using Cloudflare Worker proxy → Anthropic API
+- Chat box height fixed to use `calc(100vh - 110px)` max 480px (viewport-safe)
+- CORS locked to `https://ofirmarzouk.com` in the Cloudflare Worker
+- Top nav bar (fixed top-right) with robot head icon + Contact dropdown
+  - Robot icon toggles chat dropdown
+  - Contact item toggles contact info panel (email, phones, offices)
+  - Copy-to-clipboard on all contact values
+  - Dropdowns close each other and close on outside click
+
+### Cloudflare Worker:
+- **URL:** https://ofirs-bot.ofir08.workers.dev
+- **Source file:** `C:\Users\ofir\Desktop\Projects\My Portfolio Website\cloudflare-worker.js`
+- **Dashboard:** dash.cloudflare.com → Workers & Pages → ofirs-bot
+- API key stored as Cloudflare secret `ANTHROPIC_API_KEY` (never in browser)
+
+### TODO — Next Session:
+- **Mobile compatibility** for the portfolio page — top nav, dropdowns, project cards, and chat window are not yet optimized for small screens
+- **Fix ofirmarzouk.com (legal site)** — main page is not fitting the screen, needs layout/responsive fix
+- Fill in the `PROJECTS` array in `portfolio/index.html` (title, description, image, link)
+- Drop project images into `portfolio/assets/projects/`
+- Update `portfolio/cv.json` with real CV data
