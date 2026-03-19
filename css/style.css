@@ -1,3 +1,6 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Alef:wght@400;700&display=swap');
+
 /* Color Variables */
 :root {
     --color-primary: #4A4A4A;
@@ -17,7 +20,7 @@
 
 /* Base Styles */
 body {
-    font-family: 'Assistant', sans-serif;
+    font-family: 'Alef', sans-serif;
     line-height: 1.6;
     min-height: 100vh;
     display: flex;
@@ -46,24 +49,16 @@ body {
 /* Logo Styles */
 .logo {
     position: relative;
-    margin-right: 20px;
     z-index: 2;
-    margin-left: 80px; /* Add space from the left */
-    transform: translateX(-100px);
+    flex-shrink: 0;
 }
 
-/* Adjust logo margin for LTR */
 [dir="ltr"] .logo {
-    margin-left: -40px; /* Add space from the left in LTR */
-    margin-right: -230px;
-    transform: translateX(-100px);
+    margin-right: 20px;
 }
 
-/* Adjust logo margin for RTL */
 [dir="rtl"] .logo {
-    margin-right: 80px; /* Add space from the right in RTL */
-    margin-left: -230px;
-    transform: translateX(100px);
+    margin-left: 20px;
 }
 
 .logo-image {
@@ -96,7 +91,7 @@ nav {
     color: var(--color-white);
     text-decoration: none;
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 700;
     transition: color 0.3s ease;
     white-space: nowrap;
 }
