@@ -40,9 +40,36 @@
 
     /* ─── Intro ───────────────────────────────────── */
     #intro-screen {
-      padding: 0 2rem;
       opacity: 0;
       transition: opacity 0.8s ease;
+    }
+
+    #intro-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 0 2rem;
+    }
+
+    #skip-btn {
+      margin-top: 2.4rem;
+      background: none;
+      border: 1px solid #c8c8c8;
+      color: #aaa;
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      font-size: 0.72rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      padding: 7px 22px;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: color 0.25s ease, border-color 0.25s ease;
+    }
+
+    #skip-btn:hover {
+      color: #777;
+      border-color: #999;
     }
 
     #intro-text {
@@ -636,7 +663,10 @@
 
   <!-- Stage 2 -->
   <div class="screen" id="intro-screen">
-    <p id="intro-text"></p>
+    <div id="intro-wrap">
+      <p id="intro-text"></p>
+      <button id="skip-btn">skip</button>
+    </div>
   </div>
 
   <!-- Stage 3 -->
@@ -764,11 +794,18 @@
       introScreen.style.opacity = '1';
 
       const introEl = document.getElementById('intro-text');
-      typewriter(introEl, INTRO_TEXT, 38, () => {
+      let cancelTypewriter = typewriter(introEl, INTRO_TEXT, 38, () => {
         setTimeout(() => {
           introScreen.style.opacity = '0';
           setTimeout(startProjects, 900);
         }, 1800);
+      });
+
+      document.getElementById('skip-btn').addEventListener('click', () => {
+        if (cancelTypewriter) cancelTypewriter();
+        introScreen.style.transition = 'opacity 0.4s ease';
+        introScreen.style.opacity = '0';
+        setTimeout(startProjects, 450);
       });
 
     }, 3800);
