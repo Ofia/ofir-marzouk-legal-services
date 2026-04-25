@@ -52,25 +52,26 @@
     }
 
     #skip-btn {
-      margin-top: 2.4rem;
+      position: fixed;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
       background: none;
-      border: 1px solid #c8c8c8;
-      color: #aaa;
+      border: none;
+      color: #bbb;
       font-family: 'Inter', sans-serif;
       font-weight: 300;
       font-size: 0.72rem;
-      letter-spacing: 0.22em;
+      letter-spacing: 0.18em;
       text-transform: uppercase;
-      padding: 7px 22px;
-      border-radius: 20px;
+      padding: 0;
       cursor: pointer;
-      transition: color 0.25s ease, border-color 0.25s ease;
+      transition: color 0.25s ease;
+      z-index: 10;
     }
 
-    #skip-btn:hover {
-      color: #777;
-      border-color: #999;
-    }
+    #skip-btn:hover { color: #777; }
+    #skip-btn::after { content: ' ›'; font-size: 0.9rem; }
 
     #intro-text {
       font-family: 'Special Elite', cursive;
@@ -665,9 +666,10 @@
   <div class="screen" id="intro-screen">
     <div id="intro-wrap">
       <p id="intro-text"></p>
-      <button id="skip-btn">skip</button>
     </div>
   </div>
+
+  <button id="skip-btn" style="display:none">skip</button>
 
   <!-- Stage 3 -->
   <div class="screen" id="projects-screen">
@@ -794,15 +796,20 @@
       introScreen.style.opacity = '1';
 
       const introEl = document.getElementById('intro-text');
+      const skipBtn = document.getElementById('skip-btn');
+      skipBtn.style.display = '';
+
       let cancelTypewriter = typewriter(introEl, INTRO_TEXT, 38, () => {
         setTimeout(() => {
+          skipBtn.style.display = 'none';
           introScreen.style.opacity = '0';
           setTimeout(startProjects, 900);
         }, 1800);
       });
 
-      document.getElementById('skip-btn').addEventListener('click', () => {
+      skipBtn.addEventListener('click', () => {
         if (cancelTypewriter) cancelTypewriter();
+        skipBtn.style.display = 'none';
         introScreen.style.transition = 'opacity 0.4s ease';
         introScreen.style.opacity = '0';
         setTimeout(startProjects, 450);
