@@ -72,23 +72,10 @@ None. This repo is static.
 
 ## Open questions
 
-1. **`portfolio/assets/projects/Projects_Info.txt` names projects the brain does not index.**
-   This is a Rule 3 reachability failure — `index/repos.md` claims to cover everything we own:
-   - **The Bull — Mobile App** — React Native 0.81.4 / Expo SDK 54 / TypeScript, Node + Express
-     backend, Claude with **tool use**, Google OAuth + PayPal + Zodomus. *A whole application with no
-     entry in the brain.* Note that `The Bull Properties\CLAUDE.md` promises a `mobile/` folder that
-     is empty — this may be where that app actually lives.
-   - **Invoice Manager** — React + Vite + shadcn/ui, FastAPI + Supabase, S3, Gmail API, Claude for
-     data extraction. **Live at `invoices-kappa-teal.vercel.app`.** This is a *fourth* independent
-     structured-extraction build (after Contracts, Properties, Salon) and a second Gmail integration.
-   - **AI Data Visualizer** — Flask + Hugging Face Qwen 2.5 72B, pandas/pdfplumber/pytesseract,
-     Plotly. Live on Hugging Face Spaces.
-   - Plus **Eight Ball**, **Goma Slot Machine**, **Villa Kaleo** (client site, `villakaleost.com`).
-
-   None have local paths recorded. **Finding where they live is the highest-value follow-up from this
-   pass** — two of them are real AI applications.
+1. **`portfolio/assets/projects/Projects_Info.txt` lists older projects — deliberately out of scope.**
+   The Bull mobile app, Invoice Manager, AI Data Visualizer, Eight Ball, Goma Slot Machine, Villa
+   Kaleo. **Decision (Ofir, 2026-07-27): old and superseded, not part of the Aldebaran brain.** The
+   file stays as the portfolio's own content; it is not a source for `index/repos.md`.
 2. **The Bull Contracts is described here as Flask + Gun.js + Claude 3.5.** That is an earlier
    architecture; the current repo is FastAPI + Supabase + `claude-sonnet-4-6`. Historical, not wrong —
    but the portfolio is public and says the old thing.
-3. **`Projects_Info.txt` is a flat text file doing an index's job.** It should either graduate into
-   `index/repos.md` or be pointed at from there. Right now it is the only record of half our work.
