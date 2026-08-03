@@ -1,45 +1,45 @@
 {
   "name": "Ofir Marzouk",
-  "title": "AI Solutions & QA Associate | Software Developer | Legal Engineer",
+  "title": "AI Specialist | Software Developer | FDE | Legal and Property Tech",
   "contact": {
     "email": "ofir08@gmail.com",
     "phone": ["+436601772166", "+50660514607"],
-    "linkedin": "https://linkedin.com/in/ofir-marzouk-roewekamp-4bb85657",
-    "github": "https://github.com/Ofia",
-    "huggingface": "https://huggingface.co/Ofirmarz",
-    "real_estate": "https://ofirmarzouk.com/business"
+    "website": "https://ofirmarzouk.com/portfolio/",
+    "linkedin": "https://www.linkedin.com/in/ofir-marzouk-4bb85657",
+    "github": "https://github.com/Ofia"
   },
-  "summary": "An adaptable solution engineer with hands-on experience in software development and QA testing, building end-to-end features from architecture to deployment. Integrates modern technologies, including AI, to enhance work and the software built. Also a qualified lawyer with experience in international law, real estate, compliance, and product management. Legal background enhances analytical approach and ability to navigate regulatory and business considerations within technical projects.",
+  "summary": "Full-stack developer and founder who ships complete systems from zero to production. I take operational problems — legal workflows, real estate management, company operations — and build end-to-end solutions: database architecture, backend services, AI integrations, frontend interfaces, and deployment. I've designed and deployed production operating systems solo, balancing technical rigor with user-facing value. My background spans 15 years of web and software development, 12 years as a licensed lawyer, and deep experience in fintech and proptech. I work best at the intersection of customer needs and technical implementation, with experience in forward deployment, product development, and scaling operations.",
   "projects": [
     {
-      "name": "The-Bull.ai",
-      "type": "Business Management App",
-      "description": "AI-powered MVP using Python, React Native, and TypeScript. Architected to integrate multiple APIs for business intelligence.",
-      "link": "https://youtube.com/shorts/QyfdxbyuJ-o?si=pPT6NUCkdwsrm8-Q"
+      "name": "The Bull",
+      "url": "https://www.the-bull.ai/",
+      "description": "Custom AI architecture service and knowledge engine integration for businesses. An AI-powered software company building custom platforms, agents, and services for legal, financial, and operational teams. Products include Contracts, Properties, Developer, and Salon. Agents include Order Management Agent and Business Brain. Services span Company's Brain, AI Integrations, Business Restructuring, and Forward Deployment Engineering."
     },
     {
-      "name": "DataAnalyzer",
-      "type": "Web App",
-      "description": "AI-powered web app using Python that creates graphic analyses and charts from raw data files.",
-      "link": "https://huggingface.co/spaces/Ofirmarz/ai-data-visualizer"
+      "name": "The Bull Contracts",
+      "url": "https://the-bull-legal.vercel.app/",
+      "description": "AI-powered legal process management platform. CRM, contract obligation management and automation system, RAG and LLM testing environment, node view tool for legal relationships, legal analysis tool, dashboards, Gun.js decentralized networking features for privacy communication, and document verification."
     },
     {
-      "name": "ShakespeareAI",
-      "type": "Chat Application",
-      "description": "AI-powered chat application that responds to prompts in Shakespearean Old English.",
-      "link": "https://huggingface.co/spaces/Ofirmarz/TheOldTimesAI"
+      "name": "Brixxel",
+      "url": "https://brixxel.vercel.app/",
+      "description": "Real estate management system with over 90 API endpoints across 14 features. Frontend includes a 3D viewer, dashboards, bot tabs, invoice pipeline, and admin portal. Backend covers routers, services, AI integrations, and Alembic migrations. Full relational schema with role-based access control."
     },
     {
-      "name": "Invoices Manager",
-      "type": "Full-Stack App",
-      "description": "AI-enhanced Invoice Manager built end-to-end (architecture to deployment). Full-stack with five cloud services for upload, AI extraction, validation, and storage.",
-      "link": "https://invoices-kappa-teal.vercel.app/"
+      "name": "The Salon",
+      "url": "https://chani-kramer-salon-hoth.vercel.app/",
+      "description": "Full company intelligent OS for a luxury beauty center in NYC with over $1M in annual revenue. Includes user boards, calendar and appointment system, POS with department cart management, CRM, owners dashboard with RAG data core, AI integration, specialized bot with active tools that learn and execute within the system, inventory management with invoice parsing, bookkeeping tools, and more."
+    },
+    {
+      "name": "Urbania",
+      "url": "https://urbania-pi.vercel.app/",
+      "description": "Full company intelligent OS for a real estate developer with over $100M in revenue. Includes autonomous workflow between departments, email parsing for task automations, CRM, teachable voice agent, and the company's data core."
     }
   ],
   "technical_skills": {
-    "foundations": ["Python", "Git/GitHub", "REST API", "JavaScript", "HTML/CSS", "Postman", "Playwright", "Flask/Django (Basic)", "FastAPI", "Figma", "React Native", "Pytest"],
-    "cloud": ["AWS S3", "Supabase", "Render", "Vercel", "Google Cloud"],
-    "ai_tools": ["API Integration", "RAG (Pinecone)", "Prompt Engineering", "Hugging Face", "Replicate", "Claude Code", "OpenAI API", "Open Source LLMs"]
+    "foundations": ["Python", "Git/GitHub", "REST API", "JavaScript", "TypeScript", "HTML/CSS", "Postman", "Playwright", "Flask/Django", "FastAPI", "React", "Node.js", "Three.js", "Vite", "Uvicorn", "Docker", "React Native", "Gun.js"],
+    "cloud": ["AWS S3", "Supabase Auth and DB", "Render", "Vercel", "Railway (Backend, DB and Redis)", "Google Cloud OAuth"],
+    "ai_tools": ["API integration", "RAG and embedding models", "Vector Databases (LlamaIndex)", "LangChain", "Prompt Engineering", "Open source models", "Replicate", "Coding Agents", "Vapi - AI Voice Agents", "Model testing and evaluation"]
   },
   "legal_engineering": {
     "degree": "LL.B. (Bachelor of Laws)",
@@ -47,25 +47,26 @@
   },
   "experience": [
     {
-      "title": "QA AI Data and Content Moderator",
-      "company": "Majorel GmbH (Meta)",
+      "title": "Quality Assurance Analyst",
+      "company": "Majorel GmbH | Meta",
       "location": "Berlin",
       "period": "2025 – 2026",
       "highlights": [
-        "Evaluate and provide feedback to improve AI-assisted moderation workflows, contributing to the training and refinement of LLM development.",
-        "Review and moderate content according to Meta policies, ensuring high-standard accuracy and consistency in AI performance.",
+        "Evaluate and provide feedback to improve AI-assisted moderation workflows, contributing to the training and refinement of LLM development at Meta Platforms.",
+        "Review and moderate content in accordance with Meta policies, ensuring high standards of accuracy and consistency in AI performance and users' platform experience.",
         "Collaborate with technical teams to support process improvements and maintain high-quality data standards."
       ]
     },
     {
-      "title": "Product & Automation Specialist",
-      "company": "Planet Bibi LTD",
+      "title": "Software Developer | AI and Automations Specialist | Consultant",
+      "company": "PlanetBibi LLC, ChaniKR Salon LLC, Urbania SRL, Shkiat Hashahar SRL, Jasmine Pacific Breeze Limitada, OB Hermosa Limitada, Avneri Holdings SRL",
       "location": "Remote",
-      "period": "2022 – 2025",
+      "period": "2022 – 2026",
       "highlights": [
-        "Led the transition from over-engineered external tooling to lightweight in-house solutions, significantly reducing operating expenses.",
-        "Integrated automation tools for operational systems and marketing funnels, aligning technical development with business priorities.",
-        "Redesigned database structures and connected payment solutions to streamline financial operations."
+        "Developed full operating systems, AI layers, chatbots, RAG databases, voice agents, CRMs, eCommerce workflows, data analysis tools, websites, and more.",
+        "Restructured companies' databases and financial management systems.",
+        "Led transitions from over-engineered external tools to full in-house solutions.",
+        "Integrated automation tools for operational systems and marketing funnels."
       ]
     },
     {
@@ -74,15 +75,19 @@
       "location": "USA/Remote",
       "period": "2016 – 2021",
       "highlights": [
-        "Managed the development of several Fintech products, an Online Trading platform, Web Applications, a cryptocurrency coin, and a cryptocurrency exchange service.",
-        "Acted as the primary bridge among legal, financial, and technical stakeholders to ensure compliant implementation of products.",
-        "Designed and maintained financial data structures and reporting systems for the company's technical products and real estate investment portfolio."
+        "Managed the full software development lifecycle of several fintech products, including an online trading platform, web applications, blockchain solutions, and a cryptocurrency exchange platform.",
+        "Acted as the primary bridge among legal, financial, and technical stakeholders to ensure compliant implementation of products and supporting services, including Banks, PSPs, and licensing.",
+        "Designed and maintained financial data structures and reporting systems for the company's technical products and investment portfolio."
       ]
     }
   ],
   "education": [
     {
       "degree": "LL.B. (Bachelor of Laws)",
+      "institution": "College of Management"
+    },
+    {
+      "degree": "Computer Science | Web Development",
       "institution": "College of Management"
     },
     {
