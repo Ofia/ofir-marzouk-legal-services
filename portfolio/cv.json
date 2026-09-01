@@ -8,7 +8,7 @@
     "linkedin": "https://www.linkedin.com/in/ofir-marzouk-4bb85657",
     "github": "https://github.com/Ofia"
   },
-  "summary": "Full-stack developer and founder who ships complete systems from zero to production. I take operational problems — legal workflows, real estate management, company operations — and build end-to-end solutions: database architecture, backend services, AI integrations, frontend interfaces, and deployment. I've designed and deployed production operating systems solo, balancing technical rigor with user-facing value. My background spans 15 years of web and software development, 12 years as a licensed lawyer, and deep experience in fintech and proptech. I work best at the intersection of customer needs and technical implementation, with experience in forward deployment, product development, and scaling operations.",
+  "summary": "Full-stack developer and Forward Deployed Engineer who builds and ships complete systems from zero to production. I take real operational problems — from legal workflows and real estate management to a variety of business operations — and turn them into working technical solutions, covering database architecture, backend services, AI integrations, frontend interfaces, and deployment. I've designed and deployed production systems that bring together technology, data, and business processes, balancing technical depth with practical, user-facing value. My background spans 10 years of web and software development, 12 years as a licensed lawyer, and extensive experience in fintech and proptech. I work best at the intersection of customer needs and technical implementation, where understanding the problem is as important as building the solution.",
   "projects": [
     {
       "name": "The Bull",
@@ -37,9 +37,9 @@
     }
   ],
   "technical_skills": {
-    "foundations": ["Python", "Git/GitHub", "REST API", "JavaScript", "TypeScript", "HTML/CSS", "Postman", "Playwright", "Flask/Django", "FastAPI", "React", "Node.js", "Three.js", "Vite", "Uvicorn", "Docker", "React Native", "Gun.js"],
-    "cloud": ["AWS S3", "Supabase Auth and DB", "Render", "Vercel", "Railway (Backend, DB and Redis)", "Google Cloud OAuth"],
-    "ai_tools": ["API integration", "RAG and embedding models", "Vector Databases (LlamaIndex)", "LangChain", "Prompt Engineering", "Open source models", "Replicate", "Coding Agents", "Vapi - AI Voice Agents", "Model testing and evaluation"]
+    "foundations": ["Python", "SQL", "Git/GitHub", "REST API", "JavaScript", "TypeScript", "HTML/CSS", "Postman", "Playwright", "Flask/Django", "FastAPI", "React", "Next.js", "Node.js", "Express", "Three.js", "Vite", "Uvicorn", "Docker", "React Native", "Gun.js"],
+    "cloud": ["AWS S3", "Supabase Auth and DB", "MongoDB", "Redis", "SQLAlchemy", "Alembic", "Render", "Vercel", "Railway (Backend, DB and Redis)", "Google Cloud OAuth", "Twilio", "Telnyx"],
+    "ai_tools": ["Claude", "OpenAI APIs", "RAG and embedding models", "Vector Databases (LlamaIndex)", "LangChain", "AI agents", "Prompt Engineering", "Open source models", "Replicate", "Coding Agents", "Vapi - AI Voice Agents", "Model testing and evaluation"]
   },
   "legal_engineering": {
     "degree": "LL.B. (Bachelor of Laws)",
@@ -47,37 +47,39 @@
   },
   "experience": [
     {
-      "title": "Quality Assurance Analyst",
-      "company": "Majorel GmbH | Meta",
-      "location": "Berlin",
-      "period": "2025 – 2026",
+      "title": "Forward Deployed Engineer",
+      "company": "Aldebaran Labs LLC",
+      "location": "USA/Remote",
+      "period": "2025 – Present",
       "highlights": [
-        "Evaluate and provide feedback to improve AI-assisted moderation workflows, contributing to the training and refinement of LLM development at Meta Platforms.",
-        "Review and moderate content in accordance with Meta policies, ensuring high standards of accuracy and consistency in AI performance and users' platform experience.",
-        "Collaborate with technical teams to support process improvements and maintain high-quality data standards."
+        "Design, build, and deploy AI-powered systems/ERPs for businesses, working directly with clients to understand operational needs and translate them into production-ready technical solutions.",
+        "Develop and integrate AI agents, RAG systems, voice agents, APIs, databases, CRMs, automation workflows, and custom applications into existing business environments.",
+        "Own the full deployment lifecycle, from discovery and solution architecture through development, integration, testing, deployment, and iteration based on real-world usage."
       ]
     },
     {
-      "title": "Software Developer | AI and Automations Specialist | Consultant",
-      "company": "PlanetBibi LLC, ChaniKR Salon LLC, Urbania SRL, Shkiat Hashahar SRL, Jasmine Pacific Breeze Limitada, OB Hermosa Limitada, Avneri Holdings SRL",
+      "title": "AI Integration & Systems Engineering | Technical Consultant",
+      "company": "PlanetBibi LLC, ChaniKR Salon LLC, Urbania SRL, Shkiat Hashahar SRL, Jasmine Pacific Breeze Limitada, OB Hermosa Limitada, Avneri Holdings SRL, Majorel GmbH (Meta Products)",
       "location": "Remote",
-      "period": "2022 – 2026",
+      "period": "2022 – 2025",
       "highlights": [
-        "Developed full operating systems, AI layers, chatbots, RAG databases, voice agents, CRMs, eCommerce workflows, data analysis tools, websites, and more.",
-        "Restructured companies' databases and financial management systems.",
-        "Led transitions from over-engineered external tools to full in-house solutions.",
-        "Integrated automation tools for operational systems and marketing funnels."
+        "Designed and deployed AI-powered business systems across multiple companies, including AI agents, RAG systems, voice agents, CRMs, operational platforms, eCommerce workflows, data-analysis systems, and custom web applications.",
+        "Worked directly with business owners and operational teams to identify workflows, translate business requirements into technical solutions, and deploy systems into real-world business environments.",
+        "Restructured databases, financial data systems, and operational workflows to consolidate fragmented tools and improve data consistency and process visibility.",
+        "Replaced external third-party tools with integrated in-house solutions.",
+        "Integrated AI, automation, APIs, databases, and third-party services into existing business operations, adapting implementations to the technical and operational needs of each client."
       ]
     },
     {
-      "title": "Product & Legal Lead",
-      "company": "ACRY Development",
+      "title": "Technical Product & Legal Lead",
+      "company": "Netmark LLC",
       "location": "USA/Remote",
       "period": "2016 – 2021",
       "highlights": [
-        "Managed the full software development lifecycle of several fintech products, including an online trading platform, web applications, blockchain solutions, and a cryptocurrency exchange platform.",
-        "Acted as the primary bridge among legal, financial, and technical stakeholders to ensure compliant implementation of products and supporting services, including Banks, PSPs, and licensing.",
-        "Designed and maintained financial data structures and reporting systems for the company's technical products and investment portfolio."
+        "Led the end-to-end delivery of fintech products, including an online trading platform, web applications, blockchain solutions, and a cryptocurrency exchange, coordinating software developers, technical vendors, and business stakeholders.",
+        "Translated business, financial, and regulatory requirements into technical requirements and implementation plans, working across engineering, legal, banking, PSP, and licensing partners.",
+        "Designed and structured financial data models and reporting systems supporting the company's technical products, operations, and investment portfolio.",
+        "Coordinated integrations with external financial and technology providers, resolving technical, operational, and regulatory requirements to move products from concept into production."
       ]
     }
   ],

@@ -816,7 +816,10 @@
        STAGE 3 — PROJECTS
        ═══════════════════════════════════════════════════ */
 
+    let projectsStarted = false;
     function startProjects() {
+      if (projectsStarted) return; // ponytail: guards the skip-vs-auto-advance race that double-built the card list
+      projectsStarted = true;
       document.getElementById('intro-screen').style.display = 'none';
       const projectsScreen = document.getElementById('projects-screen');
       projectsScreen.style.opacity = '1';
