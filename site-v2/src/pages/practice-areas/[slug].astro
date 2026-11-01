@@ -1,0 +1,105 @@
+---
+import type { ImageMetadata } from "astro";
+import PageLayout from "../../layouts/PageLayout.astro";
+import PageHero from "../../components/PageHero.astro";
+import Button from "../../components/Button.astro";
+import { servicesHe } from "../../content/services";
+import { articlesHe } from "../../content/articles";
+import { he } from "../../content/home";
+import heroPhoto from "../../assets/hero.png";
+import interpolPhoto from "../../assets/interpol.jpeg";
+import forexPhoto from "../../assets/forex.jpg";
+import courtroomPhoto from "../../assets/courtroom.png";
+import courthousePhoto from "../../assets/courthouse.jpg";
+
+const photoMap: Record<string, ImageMetadata> = {
+  "cybercrime-online-trading": forexPhoto,
+  extradition: heroPhoto,
+  "interpol-red-notice": interpolPhoto,
+  "international-arrest": courtroomPhoto,
+  "foreign-indictment": courtroomPhoto,
+  "plea-agreements": courthousePhoto,
+};
+
+export function getStaticPaths() {
+  return servicesHe.map((service) => ({ params: { slug: service.slug }, props: { service } }));
+}
+
+const { service } = Astro.props;
+const relatedArticles = articlesHe.filter((a) => service.relatedArticleSlugs.includes(a.slug));
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "דף הבית", item: "https://ofirmarzouk.com/" },
+      { "@type": "ListItem", position: 2, name: "תחומי התמחות", item: "https://ofirmarzouk.com/practice-areas" },
+      { "@type": "ListItem", position: 3, name: service.title, item: `https://ofirmarzouk.com/practice-areas/${service.slug}` },
+    ],
+  },
+  ...(service.faqs.length > 0
+    ? [
+        {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: service.faqs.map((item) => ({
+            "@type": "Question",
+            name: item.q,
+            acceptedAnswer: { "@type": "Answer", text: item.a },
+          })),
+        },
+      ]
+    : []),
+];
+---
+
+<PageLayout title={`${service.title} | עו"ד אופיר מרזוק`} description={service.intro} content={he} schema={schema}>
+  <PageHero photo={photoMap[service.slug]} eyebrow="תחומי התמחות" title={service.title} />
+
+  <section>
+    <div class="mx-auto max-w-3xl px-4 py-16 sm:px-6">
+      <p class="text-lg text-text-dim">{service.intro}</p>
+      <div class="article-body mt-6" set:html={service.bodyHtml} />
+    </div>
+  </section>
+
+  {service.faqs.length > 0 && (
+    <section class="bg-ink-soft">
+      <div class="mx-auto max-w-3xl px-4 py-16 sm:px-6">
+        <h2 class="font-heading text-2xl font-bold text-text">שאלות נפוצות</h2>
+        <div class="mt-6 divide-y divide-ink-line border-y border-ink-line">
+          {service.faqs.map((item) => (
+            <details class="group py-4">
+              <summary class="flex cursor-pointer list-none items-center justify-between font-heading text-base font-semibold text-text">
+                {item.q}
+                <span class="ms-4 shrink-0 text-accent transition-transform group-open:rotate-45">+</span>
+              </summary>
+              <p class="mt-3 text-sm text-text-dim">{item.a}</p>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  {relatedArticles.length > 0 && (
+    <section>
+      <div class="mx-auto max-w-3xl px-4 py-16 sm:px-6">
+        <h2 class="font-heading text-xl font-bold text-text">מאמרים קשורים</h2>
+        <ul class="mt-4 flex flex-col gap-2">
+          {relatedArticles.map((a) => (
+            <li><a href={`/articles/${a.slug}`} class="text-accent underline underline-offset-4">{a.title}</a></li>
+          ))}
+        </ul>
+      </div>
+    </section>
+  )}
+
+  <section class="border-t border-ink-line bg-ink">
+    <div class="mx-auto flex max-w-3xl flex-col items-center gap-5 px-4 py-16 text-center sm:px-6">
+      <h2 class="font-heading text-2xl font-bold text-text">מעוניינים בשיחת ייעוץ?</h2>
+      <Button href="/contact" variant="primary">קביעת שיחת ייעוץ ראשונית</Button>
+    </div>
+  </section>
+</PageLayout>

@@ -1,0 +1,29 @@
+---
+import { Image } from "astro:assets";
+import type { HomeContent } from "../content/home";
+import Button from "./Button.astro";
+import headshot from "../assets/headshot.jpg";
+
+interface Props {
+  content: HomeContent;
+}
+const { content } = Astro.props;
+const aboutHref = content.lang === "he" ? "/about" : "/en/about";
+---
+
+<section class="bg-ink">
+  <div class="mx-auto flex max-w-6xl flex-col items-center gap-10 px-4 py-16 sm:px-6 sm:py-24 lg:flex-row" data-reveal>
+    <Image
+      src={headshot}
+      alt=""
+      width={224}
+      height={224}
+      class="h-56 w-56 shrink-0 rounded-full object-cover grayscale"
+    />
+    <div class="text-center lg:text-start">
+      <h2 class="font-heading text-2xl font-bold text-text sm:text-4xl">{content.about.title}</h2>
+      <p class="mt-4 max-w-2xl text-sm text-text-dim sm:text-base">{content.about.blurb[0]}</p>
+      <Button href={aboutHref} variant="ghost" class="mt-5 !px-0 !py-0">{content.about.cta}</Button>
+    </div>
+  </div>
+</section>

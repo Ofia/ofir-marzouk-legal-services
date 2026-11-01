@@ -1,0 +1,18 @@
+---
+import PageLayout from "../layouts/PageLayout.astro";
+import PageHero from "../components/PageHero.astro";
+import { he } from "../content/home";
+import courthousePhoto from "../assets/courthouse.jpg";
+---
+
+<PageLayout title='הצהרת אחריות | עו"ד אופיר מרזוק' description="הצהרת אחריות משפטית." content={he}>
+  <PageHero photo={courthousePhoto} eyebrow="מידע משפטי" title="הצהרת אחריות" />
+  <!-- REVIEW: draft disclaimer — requires lawyer sign-off before publishing -->
+  <section class="bg-ink">
+    <div class="article-body mx-auto max-w-3xl px-4 py-16 sm:px-6">
+      <p>התוכן באתר זה הינו מידע כללי בלבד, ואינו מהווה ייעוץ משפטי. אין להסתמך על האמור באתר כתחליף לייעוץ משפטי פרטני המותאם לנסיבות המקרה הספציפי שלך.</p>
+      <p>יצירת קשר באמצעות האתר, לרבות מילוי טופס יצירת קשר, אינה יוצרת יחסי עורך דין-לקוח. יחסים כאמור נוצרים אך ורק לאחר הסכמה מפורשת של שני הצדדים.</p>
+      <p>למרות המאמצים לשמור על עדכניות המידע באתר, ייתכנו שינויים בדין שטרם מצאו ביטוי בתכני האתר.</p>
+    </div>
+  </section>
+</PageLayout>

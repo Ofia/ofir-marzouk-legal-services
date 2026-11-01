@@ -1,0 +1,103 @@
+---
+import "@fontsource/frank-ruhl-libre/400.css";
+import "@fontsource/frank-ruhl-libre/500.css";
+import "@fontsource/frank-ruhl-libre/700.css";
+import "@fontsource/heebo/400.css";
+import "@fontsource/heebo/500.css";
+import "@fontsource/heebo/700.css";
+import "../styles/global.css";
+
+import type { HomeContent } from "../content/home";
+
+interface Props {
+  title: string;
+  description: string;
+  content: HomeContent;
+  /** Extra JSON-LD objects for this page (Article, FAQPage, BreadcrumbList...) — appended to the sitewide schema. */
+  schema?: Record<string, unknown>[];
+}
+
+const { title, description, content, schema = [] } = Astro.props;
+
+// Equivalent he/en paths for hreflang + the language switcher, derived from the current URL
+// so every page (not just the homepage) points at its real counterpart.
+const rawPath = Astro.url.pathname.replace(/\/$/, "") || "/";
+const isEnPath = rawPath === "/en" || rawPath.startsWith("/en/");
+const basePath = isEnPath ? rawPath.replace(/^\/en/, "") || "/" : rawPath;
+const hePath = basePath;
+const enPath = basePath === "/" ? "/en" : `/en${basePath}`;
+
+const siteUrl = Astro.site?.toString().replace(/\/$/, "") ?? "";
+const canonicalHref = `${siteUrl}${rawPath}`;
+const ogImage = `${siteUrl}/images/hero-placeholder.png`;
+const ogLocale = content.lang === "he" ? "he_IL" : "en_US";
+const ogLocaleAlt = content.lang === "he" ? "en_US" : "he_IL";
+
+const siteSchema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Attorney",
+    name: "Ofir Marzouk",
+    url: siteUrl,
+    image: `${siteUrl}/images/logo.png`,
+    jobTitle: "Criminal Defense Attorney",
+    areaServed: "IL",
+    knowsLanguage: ["he", "en", "es", "de"],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "Ofir Marzouk Law Office",
+    url: siteUrl,
+  },
+];
+---
+
+<!doctype html>
+<html lang={content.lang} dir={content.dir}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+
+    <link rel="canonical" href={canonicalHref} />
+    <link rel="alternate" hreflang="he" href={`${siteUrl}${hePath}`} />
+    <link rel="alternate" hreflang="en" href={`${siteUrl}${enPath}`} />
+    <link rel="alternate" hreflang="x-default" href={`${siteUrl}${hePath}`} />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Ofir Marzouk Law Office" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalHref} />
+    <meta property="og:locale" content={ogLocale} />
+    <meta property="og:locale:alternate" content={ogLocaleAlt} />
+    <meta property="og:image" content={ogImage} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    {[...siteSchema, ...schema].map((block) => (
+      <script type="application/ld+json" set:html={JSON.stringify(block)} />
+    ))}
+  </head>
+  <body class="flex min-h-screen flex-col bg-ink">
+    <slot />
+    <script>
+      const io = new IntersectionObserver(
+        (entries) => {
+          for (const entry of entries) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              io.unobserve(entry.target);
+            }
+          }
+        },
+        { threshold: 0.15 },
+      );
+      document.querySelectorAll("[data-reveal]").forEach((el) => io.observe(el));
+    </script>
+  </body>
+</html>

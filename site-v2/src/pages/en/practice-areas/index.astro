@@ -1,0 +1,23 @@
+---
+import PageLayout from "../../../layouts/PageLayout.astro";
+import PageHero from "../../../components/PageHero.astro";
+import PracticeGrid from "../../../components/PracticeGrid.astro";
+import { en } from "../../../content/home";
+import courthousePhoto from "../../../assets/courthouse.jpg";
+---
+
+<PageLayout
+  title="Practice Areas | Ofir Marzouk Law Office"
+  description="International criminal defense: cybercrime, extraditions, Interpol Red Notices, international arrests, foreign indictments and prosecution agreements."
+  content={en}
+>
+  <PageHero photo={courthousePhoto} eyebrow="Practice Areas" title="By Your Side in Complex International Legal Challenges" flip />
+  <section class="bg-ink">
+    <div class="mx-auto max-w-3xl px-4 pt-16 text-center sm:px-6">
+      <p class="text-text-dim">
+        When a case crosses borders, I engage trusted legal professionals from different countries to offer a coordinated defense strategy — taking into account the laws and procedures of every country involved.
+      </p>
+    </div>
+  </section>
+  <PracticeGrid content={en} />
+</PageLayout>

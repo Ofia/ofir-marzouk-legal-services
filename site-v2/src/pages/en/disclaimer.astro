@@ -1,0 +1,18 @@
+---
+import PageLayout from "../../layouts/PageLayout.astro";
+import PageHero from "../../components/PageHero.astro";
+import { en } from "../../content/home";
+import courthousePhoto from "../../assets/courthouse.jpg";
+---
+
+<PageLayout title="Legal Disclaimer | Ofir Marzouk Law Office" description="Legal disclaimer." content={en}>
+  <PageHero photo={courthousePhoto} eyebrow="Legal" title="Legal Disclaimer" flip />
+  <!-- REVIEW: draft disclaimer — requires lawyer sign-off before publishing -->
+  <section class="bg-ink">
+    <div class="article-body mx-auto max-w-3xl px-4 py-16 sm:px-6">
+      <p>The content on this site is general information only, and does not constitute legal advice. Nothing on this site should be relied upon as a substitute for individualized legal advice tailored to the specific facts of your case.</p>
+      <p>Contacting us through this site, including submitting the contact form, does not create an attorney-client relationship. Such a relationship is formed only upon the explicit agreement of both parties.</p>
+      <p>While we aim to keep this site's content current, legal developments may not yet be reflected here.</p>
+    </div>
+  </section>
+</PageLayout>

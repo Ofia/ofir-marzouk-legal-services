@@ -1,0 +1,18 @@
+---
+import PageLayout from "../layouts/PageLayout.astro";
+import PageHero from "../components/PageHero.astro";
+import { he } from "../content/home";
+import courthousePhoto from "../assets/courthouse.jpg";
+---
+
+<PageLayout title='הצהרת נגישות | עו"ד אופיר מרזוק' description="הצהרת נגישות." content={he}>
+  <PageHero photo={courthousePhoto} eyebrow="מידע משפטי" title="הצהרת נגישות" />
+  <!-- REVIEW: confirm accessibility level reached once a full audit (Phase 5) is complete -->
+  <section class="bg-ink">
+    <div class="article-body mx-auto max-w-3xl px-4 py-16 sm:px-6">
+      <p>אתר זה פועל במטרה לספק חווית גלישה נגישה לכלל המשתמשים, לרבות אנשים עם מוגבלויות, בהתאם לתקנות שוויון זכויות לאנשים עם מוגבלות (התאמות נגישות לשירות), התשע"ג-2013.</p>
+      <h2>פניות בנושא נגישות</h2>
+      <p>אם נתקלת בבעיית נגישות באתר, נשמח שתפנה/י אלינו <a href="/contact" class="text-accent underline underline-offset-4">דרך עמוד יצירת הקשר</a>, ונפעל לטיפול בפנייה בהקדם.</p>
+    </div>
+  </section>
+</PageLayout>

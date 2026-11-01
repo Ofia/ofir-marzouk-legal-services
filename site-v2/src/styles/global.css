@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+/* Palette pulled from the reference (demo-prisma.sitesplaced.com): near-black
+   + cream, photography does the rest. The only color accent is brass/gold,
+   taken from the existing ofirmarzouk logo — no blue, no teal. */
+@theme {
+  --color-ink: #0b0b0c;
+  --color-ink-soft: #17171a;
+  --color-ink-line: #ffffff1a;
+  --color-paper: #f2ece0;
+  --color-paper-dim: #f2ece0b3;
+  --color-text: #f2ece0;
+  --color-text-dim: #f2ece0a6;
+  --color-accent: #c9a24b;
+  --color-accent-deep: #a9833a;
+  --color-whatsapp: #25d366;
+
+  --font-heading: "Frank Ruhl Libre", "Times New Roman", serif;
+  --font-body: "Heebo", "Arial", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-ink);
+  color: var(--color-text);
+  font-family: var(--font-body);
+}
+
+/* Hebrew sits taller than Latin at the same font-size; give RTL pages a touch more line-height. */
+[dir="rtl"] {
+  line-height: 1.75;
+}
+
+[dir="ltr"] {
+  line-height: 1.6;
+}
+
+::selection {
+  background-color: var(--color-accent);
+  color: var(--color-ink);
+}
+
+/* Minimal scroll-reveal: toggled by a small IntersectionObserver script in BaseLayout. */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* Long-form article body (raw HTML from content/articles.ts) */
+.article-body h2 {
+  font-family: var(--font-heading);
+  color: var(--color-text);
+  font-weight: 700;
+  font-size: 1.4rem;
+  margin: 2rem 0 0.75rem;
+}
+.article-body p {
+  color: var(--color-text-dim);
+  margin-bottom: 1.1rem;
+}
+.article-body ul {
+  color: var(--color-text-dim);
+  margin: 0 0 1.1rem;
+  padding-inline-start: 1.25rem;
+  list-style: disc;
+}
+.article-body li {
+  margin-bottom: 0.5rem;
+}
+.article-body strong {
+  color: var(--color-accent);
+}

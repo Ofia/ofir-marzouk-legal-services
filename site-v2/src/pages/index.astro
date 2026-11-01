@@ -1,0 +1,44 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Hero from "../components/Hero.astro";
+import UrgentSituations from "../components/UrgentSituations.astro";
+import PracticeGrid from "../components/PracticeGrid.astro";
+import HowItWorks from "../components/HowItWorks.astro";
+import AboutTeaser from "../components/AboutTeaser.astro";
+import ArticlesTeaser from "../components/ArticlesTeaser.astro";
+import Faq from "../components/Faq.astro";
+import FinalCta from "../components/FinalCta.astro";
+import Footer from "../components/Footer.astro";
+import { he } from "../content/home";
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: he.faq.items.map((item) => ({
+    "@type": "Question",
+    name: item.q,
+    acceptedAnswer: { "@type": "Answer", text: item.a },
+  })),
+};
+---
+
+<BaseLayout
+  title="עו״ד אופיר מרזוק | הגנה פלילית בינלאומית, הסגרות והודעות אדומות"
+  description="עו״ד אופיר מרזוק מתמחה בהגנה פלילית בינלאומית: הסגרות, הודעות אדומות של אינטרפול, מעצרים בחו״ל ועבירות סייבר. שיחת ייעוץ ראשונית."
+  content={he}
+  schema={[faqSchema]}
+>
+  <Header content={he} />
+  <main class="flex-1">
+    <Hero content={he} />
+    <UrgentSituations content={he} />
+    <PracticeGrid content={he} />
+    <HowItWorks content={he} />
+    <AboutTeaser content={he} />
+    <ArticlesTeaser content={he} />
+    <Faq content={he} />
+    <FinalCta content={he} />
+  </main>
+  <Footer content={he} />
+</BaseLayout>

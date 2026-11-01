@@ -1,0 +1,25 @@
+---
+import type { HomeContent } from "../content/home";
+
+interface Props {
+  content: HomeContent;
+}
+const { content } = Astro.props;
+---
+
+<section class="bg-ink-soft">
+  <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24" data-reveal>
+    <h2 class="text-center font-heading text-2xl font-bold text-text sm:text-4xl">
+      {content.howItWorks.title}
+    </h2>
+    <ol class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      {content.howItWorks.steps.map((step, i) => (
+        <li class="border-t border-ink-line pt-4">
+          <span class="font-heading text-sm font-semibold text-accent">{String(i + 1).padStart(2, "0")}</span>
+          <h3 class="mt-2 font-heading text-base font-semibold text-text">{step.title}</h3>
+          <p class="mt-2 text-sm text-text-dim">{step.blurb}</p>
+        </li>
+      ))}
+    </ol>
+  </div>
+</section>

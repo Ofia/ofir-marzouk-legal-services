@@ -1,0 +1,23 @@
+---
+import PageLayout from "../layouts/PageLayout.astro";
+import PageHero from "../components/PageHero.astro";
+import FinalCta from "../components/FinalCta.astro";
+import Button from "../components/Button.astro";
+import { he } from "../content/home";
+import courthousePhoto from "../assets/courthouse.jpg";
+---
+
+<PageLayout title='צור קשר | עו"ד אופיר מרזוק' description="יצירת קשר בוואטסאפ או באמצעות טופס יצירת קשר." content={he}>
+  <PageHero photo={courthousePhoto} eyebrow="צור קשר" title='יצירת קשר עם עו"ד אופיר מרזוק' />
+
+  <section class="bg-ink">
+    <div class="mx-auto max-w-3xl px-4 pt-16 text-center sm:px-6">
+      <Button href={he.whatsappHref} variant="primary">{he.hero.ctaSecondary}</Button>
+      <p class="mt-8 text-sm text-text-dim">
+        כל פנייה ושיחה עם עורך דין כפופה לחיסיון עורך דין-לקוח. נשתדל לחזור אליך תוך יום עסקים אחד.
+      </p>
+    </div>
+  </section>
+
+  <FinalCta content={he} />
+</PageLayout>

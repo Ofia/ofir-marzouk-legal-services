@@ -1,0 +1,33 @@
+---
+import type { HomeContent } from "../content/home";
+
+interface Props {
+  content: HomeContent;
+}
+const { content } = Astro.props;
+
+const legalSlugs = ["privacy", "disclaimer", "accessibility"];
+const base = content.lang === "he" ? "" : "/en";
+const year = new Date().getFullYear();
+---
+
+<footer class="bg-ink-soft">
+  <div class="mx-auto max-w-6xl px-4 py-10 text-center sm:px-6 sm:text-start">
+    <div class="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between">
+      <div>
+        <p class="font-heading text-lg font-semibold text-text">{content.nav.home === "דף הבית" ? "עו\"ד אופיר מרזוק" : "Ofir Marzouk Law Office"}</p>
+        <p class="mt-1 text-sm text-text-dim">{content.footer.tagline}</p>
+      </div>
+      <nav class="flex flex-col gap-2 sm:items-end">
+        {content.footer.legal.map((label, i) => (
+          <a href={`${base}/${legalSlugs[i]}`} class="text-sm text-text-dim hover:text-accent">
+            {label}
+          </a>
+        ))}
+      </nav>
+    </div>
+    <p class="mt-8 border-t border-ink-line pt-6 text-xs text-text-dim">
+      &copy; {year} {content.footer.rights}
+    </p>
+  </div>
+</footer>

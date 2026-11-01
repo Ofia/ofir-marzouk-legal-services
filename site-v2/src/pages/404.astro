@@ -1,0 +1,16 @@
+---
+import PageLayout from "../layouts/PageLayout.astro";
+import Button from "../components/Button.astro";
+import { he } from "../content/home";
+---
+
+<PageLayout title='הדף לא נמצא | עו"ד אופיר מרזוק' description="הדף המבוקש לא נמצא." content={he}>
+  <section class="flex min-h-[70vh] items-center justify-center bg-ink">
+    <div class="mx-auto max-w-lg px-4 text-center sm:px-6">
+      <p class="font-heading text-6xl font-bold text-accent">404</p>
+      <h1 class="mt-4 font-heading text-2xl font-bold text-text">הדף המבוקש לא נמצא</h1>
+      <p class="mt-3 text-text-dim">ייתכן שהקישור שגוי או שהדף הוסר.</p>
+      <Button href="/" variant="primary" class="mt-8">חזרה לדף הבית</Button>
+    </div>
+  </section>
+</PageLayout>

@@ -1,0 +1,34 @@
+---
+import { Image } from "astro:assets";
+import PageLayout from "../layouts/PageLayout.astro";
+import PageHero from "../components/PageHero.astro";
+import Button from "../components/Button.astro";
+import { he } from "../content/home";
+import courthousePhoto from "../assets/courthouse.jpg";
+import headshot from "../assets/headshot.jpg";
+---
+
+<PageLayout
+  title='אודות עו"ד אופיר מרזוק'
+  description={he.about.blurb[0]}
+  content={he}
+>
+  <PageHero photo={courthousePhoto} eyebrow="אודות" title='עו"ד אופיר מרזוק' />
+
+  <section class="bg-ink">
+    <div class="mx-auto flex max-w-5xl flex-col items-center gap-10 px-4 py-16 sm:px-6 sm:py-24 lg:flex-row lg:items-start">
+      <Image src={headshot} alt="עו״ד אופיר מרזוק" width={280} height={280} class="h-64 w-64 shrink-0 rounded-full object-cover grayscale" />
+      <div class="text-center lg:text-start">
+        {he.about.blurb.map((paragraph) => (
+          <p class="mt-4 text-lg text-text-dim first:mt-0">{paragraph}</p>
+        ))}
+        <!-- REVIEW: credentials list — confirm education details -->
+        <ul class="mt-6 flex flex-col gap-2 text-sm text-text-dim">
+          <li>LLB, עורך דין מוסמך לשכת עורכי הדין</li>
+          <li>שפות: עברית, אנגלית, ספרדית, גרמנית</li>
+        </ul>
+        <Button href="/contact" variant="primary" class="mt-8">קביעת שיחת ייעוץ ראשונית</Button>
+      </div>
+    </div>
+  </section>
+</PageLayout>

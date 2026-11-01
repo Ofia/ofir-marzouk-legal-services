@@ -1,0 +1,25 @@
+---
+import PageLayout from "../layouts/PageLayout.astro";
+import PageHero from "../components/PageHero.astro";
+import { he } from "../content/home";
+import courthousePhoto from "../assets/courthouse.jpg";
+---
+
+<PageLayout title='מדיניות פרטיות | עו"ד אופיר מרזוק' description="מדיניות הפרטיות של האתר." content={he}>
+  <PageHero photo={courthousePhoto} eyebrow="מידע משפטי" title="מדיניות פרטיות" />
+  <!-- REVIEW: draft policy — requires lawyer sign-off before publishing -->
+  <section class="bg-ink">
+    <div class="article-body mx-auto max-w-3xl px-4 py-16 sm:px-6">
+      <h2>מה אנו אוספים</h2>
+      <p>טופס יצירת הקשר באתר אוסף את השם, כתובת האימייל, מספר הטלפון וההודעה שתמסור/י מרצונך.</p>
+      <h2>למה אנו אוספים את המידע</h2>
+      <p>המידע משמש לצורך יצירת קשר חוזר ומענה לפנייתך בלבד.</p>
+      <h2>שמירת המידע</h2>
+      <p>המידע נשמר לפרק הזמן הנדרש לצורך הטיפול בפנייה, ובהתאם לחובות שמירת מסמכים החלות על משרד עורכי דין.</p>
+      <h2>העברת מידע לצדדים שלישיים</h2>
+      <p>פרטי הטופס מועברים לשירות שליחת טפסים חיצוני (Formspree) לצורך העברת הפנייה בלבד, ואינם נמכרים או משותפים למטרות שיווק.</p>
+      <h2>זכויותיך</h2>
+      <p>ניתן לפנות בכל עת בבקשה לעיין, לתקן או למחוק מידע שנמסר.</p>
+    </div>
+  </section>
+</PageLayout>

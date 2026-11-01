@@ -1,0 +1,25 @@
+---
+import PageLayout from "../../layouts/PageLayout.astro";
+import PageHero from "../../components/PageHero.astro";
+import { en } from "../../content/home";
+import courthousePhoto from "../../assets/courthouse.jpg";
+---
+
+<PageLayout title="Privacy Policy | Ofir Marzouk Law Office" description="This site's privacy policy." content={en}>
+  <PageHero photo={courthousePhoto} eyebrow="Legal" title="Privacy Policy" flip />
+  <!-- REVIEW: draft policy — requires lawyer sign-off before publishing -->
+  <section class="bg-ink">
+    <div class="article-body mx-auto max-w-3xl px-4 py-16 sm:px-6">
+      <h2>What we collect</h2>
+      <p>The site's contact form collects the name, email address, phone number, and message you choose to provide.</p>
+      <h2>Why we collect it</h2>
+      <p>The information is used solely to respond to your inquiry.</p>
+      <h2>Retention</h2>
+      <p>Information is kept for as long as needed to handle your inquiry, and in line with record-keeping obligations applicable to a law office.</p>
+      <h2>Third parties</h2>
+      <p>Form submissions are passed through an external form-delivery service (Formspree) solely to deliver your message, and are not sold or shared for marketing purposes.</p>
+      <h2>Your rights</h2>
+      <p>You may contact us at any time to review, correct, or request deletion of information you've submitted.</p>
+    </div>
+  </section>
+</PageLayout>

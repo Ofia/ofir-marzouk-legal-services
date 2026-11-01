@@ -1,0 +1,23 @@
+---
+import PageLayout from "../../layouts/PageLayout.astro";
+import PageHero from "../../components/PageHero.astro";
+import PracticeGrid from "../../components/PracticeGrid.astro";
+import { he } from "../../content/home";
+import courthousePhoto from "../../assets/courthouse.jpg";
+---
+
+<PageLayout
+  title='תחומי התמחות | עו"ד אופיר מרזוק'
+  description="הגנה פלילית בינלאומית: פשיעת סייבר, הסגרות, הודעות אדומות של אינטרפול, מעצרים בינלאומיים, כתבי אישום במדינה זרה והסכמים עם התביעה."
+  content={he}
+>
+  <PageHero photo={courthousePhoto} eyebrow="תחומי התמחות" title="לצידך בהתמודדות עם אתגרים משפטיים בינלאומיים" />
+  <section class="bg-ink">
+    <div class="mx-auto max-w-3xl px-4 pt-16 text-center sm:px-6">
+      <p class="text-text-dim">
+        כאשר תיק חוצה גבולות, אני מגייס אנשי מקצוע משפטיים מהימנים ממדינות שונות, כדי להציע אסטרטגיית הגנה מתואמת — תוך התחשבות בחוקים ובנהלים של כל המדינות המעורבות.
+      </p>
+    </div>
+  </section>
+  <PracticeGrid content={he} />
+</PageLayout>

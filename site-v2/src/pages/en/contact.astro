@@ -1,0 +1,23 @@
+---
+import PageLayout from "../../layouts/PageLayout.astro";
+import PageHero from "../../components/PageHero.astro";
+import FinalCta from "../../components/FinalCta.astro";
+import Button from "../../components/Button.astro";
+import { en } from "../../content/home";
+import courthousePhoto from "../../assets/courthouse.jpg";
+---
+
+<PageLayout title="Contact | Ofir Marzouk Law Office" description="Contact via WhatsApp or the contact form." content={en}>
+  <PageHero photo={courthousePhoto} eyebrow="Contact" title="Contact Adv. Ofir Marzouk" flip />
+
+  <section class="bg-ink">
+    <div class="mx-auto max-w-3xl px-4 pt-16 text-center sm:px-6">
+      <Button href={en.whatsappHref} variant="primary">{en.hero.ctaSecondary}</Button>
+      <p class="mt-8 text-sm text-text-dim">
+        Any contact and conversation with a lawyer is subject to attorney-client privilege. We aim to respond within one business day.
+      </p>
+    </div>
+  </section>
+
+  <FinalCta content={en} />
+</PageLayout>

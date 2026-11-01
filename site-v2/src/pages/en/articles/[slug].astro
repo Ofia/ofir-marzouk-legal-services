@@ -1,0 +1,64 @@
+---
+import PageLayout from "../../../layouts/PageLayout.astro";
+import PageHero from "../../../components/PageHero.astro";
+import Button from "../../../components/Button.astro";
+import { articlesEn } from "../../../content/articles";
+import { en } from "../../../content/home";
+
+export function getStaticPaths() {
+  return articlesEn.map((article) => ({ params: { slug: article.slug }, props: { article } }));
+}
+
+const { article } = Astro.props;
+const otherArticles = articlesEn.filter((a) => a.slug !== article.slug);
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: article.title,
+    datePublished: article.date,
+    dateModified: article.date,
+    inLanguage: "en",
+    author: { "@type": "Person", name: "Ofir Marzouk" },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://ofirmarzouk.com/en" },
+      { "@type": "ListItem", position: 2, name: "Articles", item: "https://ofirmarzouk.com/en/articles" },
+      { "@type": "ListItem", position: 3, name: article.title, item: `https://ofirmarzouk.com/en/articles/${article.slug}` },
+    ],
+  },
+];
+---
+
+<PageLayout title={`${article.title} | Ofir Marzouk Law Office`} description={article.title} content={en} schema={schema}>
+  <PageHero photo={article.photo} eyebrow={article.dateDisplay} title={article.title} flip />
+
+  <section>
+    <div class="mx-auto max-w-3xl px-4 py-16 sm:px-6">
+      <a href="/en/articles" class="text-sm font-semibold text-accent">← Back to Articles</a>
+      <div class="article-body mt-8" set:html={article.bodyHtml} />
+    </div>
+  </section>
+
+  <section class="border-t border-ink-line bg-ink-soft">
+    <div class="mx-auto max-w-3xl px-4 py-16 sm:px-6">
+      <h2 class="font-heading text-xl font-bold text-text">More Articles</h2>
+      <ul class="mt-4 flex flex-col gap-2">
+        {otherArticles.map((a) => (
+          <li><a href={`/en/articles/${a.slug}`} class="text-accent underline underline-offset-4">{a.title}</a></li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <section class="border-t border-ink-line bg-ink">
+    <div class="mx-auto flex max-w-3xl flex-col items-center gap-5 px-4 py-16 text-center sm:px-6">
+      <h2 class="font-heading text-2xl font-bold text-text">Interested in a consultation?</h2>
+      <Button href="/en/contact" variant="primary">Book a Free Initial Consultation</Button>
+    </div>
+  </section>
+</PageLayout>
