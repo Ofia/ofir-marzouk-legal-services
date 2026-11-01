@@ -1,141 +1,125 @@
-# Ofir Marzouk Legal Services Website
+# Ofir Marzouk — Project Overview
 
-## Directory Structure
+## Live Site Map
 
-```
-/
-├── index.html                  # Hebrew homepage
-├── about.html                  # Hebrew about page  
-├── services.html               # Hebrew services page
-├── contact.html                # Hebrew contact page
-├── articles.html               # Hebrew articles main page ✅ UPDATED
-├── articles/                   # Hebrew articles directory
-│   ├── interpol.html          # Hebrew Interpol article ✅ UPDATED
-│   ├── forex.html             # Hebrew Forex article ✅ UPDATED 
-│   └── arrests.html           # Hebrew Arrests article ✅ UPDATED
-├── en/                        # English version directory
-│   ├── index.html             # English homepage ✅ UPDATED
-│   ├── about.html             # English about page
-│   ├── services.html          # English services page
-│   ├── contact.html           # English contact page
-│   ├── articles.html          # English articles main page ✅ NEW
-│   └── articles/              # English articles directory ✅ NEW
-│       ├── interpol.html      # English Interpol article ✅ NEW
-│       ├── forex.html         # English Forex article ✅ NEW
-│       └── arrests.html       # English Arrests article ✅ NEW
-├── css/
-│   └── style.css              # Main stylesheet with mobile responsiveness
-├── js/
-│   └── main.js                # Mobile menu and interactions
-├── images/                    # Image assets
-│   ├── Logo.png
-│   ├── Home page.png
-│   ├── Article Interpol.jpeg
-│   ├── Article FX.jpg
-│   └── Article Arrests.png
-├── testing/                   # Development/testing files
-├── Content/                   # Content directory
-├── CNAME                      # GitHub Pages domain config
-└── README.md                  # Project documentation
-```
-
-## Recent Updates (Claude Session)
-
-### ✅ Completed Tasks:
-
-1. **Created Complete English Articles Section**
-   - English articles main page with responsive grid layout
-   - 3 English article sub-pages with full content translation
-   - Mobile-optimized layouts matching Hebrew version
-
-2. **Fixed Language Navigation**
-   - Added EN/עברית switchers to all articles pages
-   - Fixed navigation links between Hebrew ↔ English versions
-   - Proper bidirectional language switching
-
-3. **Mobile Responsiveness**
-   - All articles pages fully responsive on mobile
-   - Hamburger menu functionality
-   - Optimized touch targets and spacing
-   - Fluid typography using clamp()
-
-### 🔧 Technical Implementation:
-
-- **Language Switcher Position:** 
-  - Hebrew pages: Left side (RTL layout)
-  - English pages: Right side (LTR layout)
-- **Color Scheme:** White text/border on dark header background
-- **Mobile Breakpoints:** 768px and 480px
-- **Grid Layout:** Auto-fit responsive cards
-
-### 📱 Mobile Features:
-- Responsive article grid
-- Full-width "Read More" buttons on mobile
-- Optimized banner heights (400px → 300px → 250px)
-- Touch-friendly navigation
-
-## Git Repository
-**Remote:** https://github.com/Ofia/ofir-marzouk-legal-services.git
-**Branch:** main
-
-## Files Modified/Added:
-- `articles.html` - Added EN language switcher
-- `articles/interpol.html` - Added EN language switcher  
-- `articles/forex.html` - Added EN language switcher
-- `articles/arrests.html` - Added EN language switcher
-- `en/index.html` - Fixed articles navigation link
-- `en/articles.html` - NEW: English articles main page
-- `en/articles/interpol.html` - NEW: English Interpol article
-- `en/articles/forex.html` - NEW: English Forex article  
-- `en/articles/arrests.html` - NEW: English Arrests article
-
-## Ready for Deployment
-All English articles pages are complete with proper mobile responsiveness and language switching functionality.
+| URL | Description |
+|-----|-------------|
+| `ofirmarzouk.com` | Legal services website (Hebrew + English) — **redesigned, lives in `site-v2/`** |
+| `ofirmarzouk.com/portfolio` | Personal tech portfolio |
+| `ofirmarzouk.com/business` | Real estate / business page |
 
 ---
 
-## Portfolio Page — ofirmarzouk.com/portfolio
+## 1. Legal Services Website — `ofirmarzouk.com`
 
-### Status: ✅ LIVE
+**The live source is `site-v2/` — an Astro + Tailwind site.** The old plain-HTML
+version (root-level `index.html`, `about.html`, `css/`, `js/`, `en/`, etc.) has been
+removed from the repo; it's still recoverable from git history if ever needed.
 
-A personal dev portfolio deployed as a subfolder of the legal services site.
+Bilingual (Hebrew / English): Hebrew is the default at `/`, English lives under `/en/`.
+Dark/cream/gold editorial design, real photography (courthouse, scales/gavel, Interpol,
+courtroom), Frank Ruhl Libre headings + Heebo body.
 
-### File Structure:
+### Structure (`site-v2/`)
+```
+site-v2/
+├── src/
+│   ├── pages/                    # Hebrew routes at the top level
+│   │   ├── index.astro, about.astro, contact.astro, privacy.astro, ...
+│   │   ├── articles/[slug].astro, articles/index.astro
+│   │   ├── practice-areas/[slug].astro, practice-areas/index.astro
+│   │   └── en/                   # English mirror of every route above
+│   ├── components/                # Header, Hero, PracticeGrid, Faq, FinalCta, ...
+│   ├── layouts/                  # BaseLayout (head/SEO/JSON-LD), PageLayout
+│   ├── content/                  # home.ts, services.ts, articles.ts — plain TS data,
+│   │                              # not Astro content collections (small fixed set)
+│   ├── assets/                   # source photos (optimized by astro:assets)
+│   └── styles/global.css         # Tailwind v4 @theme tokens
+├── public/                       # robots.txt, CNAME, logo, favicon
+├── REDIRECTS.md                  # old-URL → new-URL map (not wired to a host yet)
+├── SEO_NOTES.md                  # keyword targets, future article topics, GSC checklist
+└── astro.config.mjs              # site: https://ofirmarzouk.com, @astrojs/sitemap
+```
+
+### Deploy
+- `.github/workflows/deploy.yml` builds `site-v2` and publishes to GitHub Pages via
+  Actions, triggered on push to `main`.
+- **Not live yet**: repo Settings → Pages → Source is still "Deploy from a branch".
+  Until that's switched to "GitHub Actions", nothing changes at the real domain — the
+  workflow exists but has never actually run.
+- `.nojekyll` at repo root — required so GitHub's legacy Jekyll build doesn't choke on
+  Astro's `---` frontmatter if the branch-deploy pipeline ever processes the repo.
+
+### Content still needed before full launch
+- Real phone / WhatsApp / email (currently `[ADD PHONE]` / `[ADD EMAIL]` placeholders)
+- About page: exact license year
+- `Content/Mediation.txt` — the old site's mediation (גישור) page content, archived but
+  never rebuilt as a `site-v2` page (no English version existed either)
+- Legal pages (Privacy/Disclaimer/Accessibility) are drafted, need Ofir's sign-off (he's
+  the lawyer) — marked `REVIEW` in the source
+- Branded OG image (currently reuses the homepage hero photo)
+- Full QA pass (Lighthouse/axe) and wiring `REDIRECTS.md` into the host
+
+### Source content archive
+- `Content/*.txt` — original site copy (home, about, services, contact, 3 articles,
+  mediation), kept as the canonical reference for "what the real copy says," separate
+  from how it's structured in `site-v2/src/content/*.ts`.
+- `images/` — original photo/logo assets `site-v2` was built from (also still used by
+  `business.html`, which is unrelated to this redesign).
+
+---
+
+## 2. Portfolio Page — `ofirmarzouk.com/portfolio`
+
+Personal dev portfolio deployed as a subfolder of this repo.
+
+### Files:
 ```
 portfolio/
-├── index.html          ← main portfolio page (edit PROJECTS array here)
-├── cv.json             ← CV data for the chatbot (update freely)
-└── assets/
-    └── projects/       ← drop project images here (PNG/JPG/WebP, ~960x540)
-```
-
-### File Structure:
-```
-portfolio/
+├── index.html              ← all-in-one page (edit PROJECTS array + INTRO_TEXT here)
+├── cv.json                 ← CV data fed to the chatbot
 ├── Icons/
-│   └── Robot Head.png      ← pixel-art robot icon used in top nav
+│   └── Robot Head.png      ← chatbot button icon
+└── assets/
+    └── projects/           ← project images (PNG/JPG/WebP, ~960x540)
 ```
 
-### What's done:
-- Animated welcome → typewriter intro → project cards (zigzag layout)
-- AI chatbot using Cloudflare Worker proxy → Anthropic API
-- Chat box height fixed to use `calc(100vh - 110px)` max 480px (viewport-safe)
-- CORS locked to `https://ofirmarzouk.com` in the Cloudflare Worker
-- Top nav bar (fixed top-right) with robot head icon + Contact dropdown
-  - Robot icon toggles chat dropdown
-  - Contact item toggles contact info panel (email, phones, offices)
-  - Copy-to-clipboard on all contact values
-  - Dropdowns close each other and close on outside click
+### Features:
+- Animated welcome → typewriter intro → zigzag project cards
+- Top-right nav: AI chatbot + Contact dropdown
+- Mobile responsive (breakpoints: 768px, 480px)
 
-### Cloudflare Worker:
-- **URL:** https://ofirs-bot.ofir08.workers.dev
+### Chatbot (Cloudflare Worker proxy):
+- **Worker URL:** https://ofirs-bot.ofir08.workers.dev
 - **Source file:** `C:\Users\ofir\Desktop\Projects\My Portfolio Website\cloudflare-worker.js`
 - **Dashboard:** dash.cloudflare.com → Workers & Pages → ofirs-bot
+- CORS locked to `https://ofirmarzouk.com`
 - API key stored as Cloudflare secret `ANTHROPIC_API_KEY` (never in browser)
 
-### TODO — Next Session:
-- **Mobile compatibility** for the portfolio page — top nav, dropdowns, project cards, and chat window are not yet optimized for small screens
-- **Fix ofirmarzouk.com (legal site)** — main page is not fitting the screen, needs layout/responsive fix
-- Fill in the `PROJECTS` array in `portfolio/index.html` (title, description, image, link)
-- Drop project images into `portfolio/assets/projects/`
-- Update `portfolio/cv.json` with real CV data
+---
+
+## 3. Business / Real Estate Page — `ofirmarzouk.com/business`
+
+Self-contained single file, no dependency on the legal site's old `css/`/`js/` (those
+are gone now — confirmed `business.html` never referenced them).
+
+### Files:
+```
+business.html               ← root-level page, inline styles only
+images/
+└── Business Developmetn Portfolio Page.png
+```
+
+---
+
+## Git Repository
+- **Remote:** https://github.com/Ofia/ofir-marzouk-legal-services.git
+- **Branch:** main
+- **Deployed via:** GitHub Pages (see "Deploy" above — mid-migration to Actions)
+
+---
+
+## Open TODOs
+
+See "Content still needed before full launch" above. Biggest open item: switch
+Pages source to GitHub Actions to actually go live with the new site.

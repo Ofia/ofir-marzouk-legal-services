@@ -24,7 +24,9 @@ Professional legal services website specializing in international law, financial
 
 ## Development
 
-This website is built with HTML and CSS, hosted on GitHub Pages.
+The site is built with [Astro](https://astro.build) + Tailwind CSS — source lives in
+`site-v2/`. See `site-v2/README.md` for local dev setup, and the root `CLAUDE.md` for
+the full project map and deploy status. Hosted on GitHub Pages.
 
 ## Contact
 
