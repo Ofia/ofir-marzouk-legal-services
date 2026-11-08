@@ -700,12 +700,15 @@
         description: 'AI-powered legal process management platform. Ingests contracts, extracts obligations and deadlines, tracks compliance, and automates reminders — freeing lawyers from admin work to focus on judgment. Includes CRM, node view for legal relationships, RAG testing environment, and document verification.',
         image:       'assets/projects/Legales.png',
         link:        'https://legales.io/',
+        demo:        'https://www.loom.com/share/a6bf8163fdd84368bcfae9de5401a25d',
       },
       {
         title:       'The Salon',
         description: 'Full company intelligent OS for a luxury beauty center in NYC with over $1M in annual revenue — calendar and appointment system, POS with department cart management, CRM, owners dashboard with RAG data core, AI integration, specialized bot that learns and executes within the system, inventory management with invoice parsing, and bookkeeping tools.',
         image:       'assets/projects/The Salon.png',
         link:        'https://chani-kramer-salon-hoth.vercel.app/',
+        demo:        'https://www.loom.com/share/0f8b7bedc07f4b1db363e2b089424baa',
+        demoOnly:    true,
       },
       {
         title:       'Urbania',
@@ -863,7 +866,7 @@
         descEl.className = 'desc';
         descWrap.appendChild(descEl);
 
-        if (p.link) {
+        if (p.link && !p.demoOnly) {
           const a = document.createElement('a');
           a.href = p.link;
           a.target = '_blank';
@@ -871,6 +874,16 @@
           a.className = 'proj-link';
           a.textContent = '→ view project';
           descWrap.appendChild(a);
+        }
+
+        if (p.demo) {
+          const d = document.createElement('a');
+          d.href = p.demo;
+          d.target = '_blank';
+          d.rel = 'noopener noreferrer';
+          d.className = 'proj-link';
+          d.textContent = '→ view demo';
+          descWrap.appendChild(d);
         }
 
         row.appendChild(box);
